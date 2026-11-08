@@ -1,0 +1,15 @@
+SheetJS Community Edition 0.20.3
+File: xlsx.full.min.js
+Copyright (C) 2013-present SheetJS LLC
+https://sheetjs.com
+
+This copy is the Community Edition identified as version 0.20.3 inside the file
+(XLSX.version = "0.20.3"). That community release is published under the
+Apache License, Version 2.0:
+
+https://github.com/SheetJS/sheetjs/blob/v0.20.3/LICENSE
+https://www.apache.org/licenses/LICENSE-2.0
+
+The dashboard loads this file only in the browser, from a project-relative
+path, and only when someone uploads an Excel workbook. The offline dashboard
+embeds the same file so a workbook can be read with no network.

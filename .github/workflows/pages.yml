@@ -1,0 +1,40 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - name: Rebuild and stage the site
+        run: |
+          python3 build/build.py
+          mkdir -p _site
+          tar --exclude .git --exclude .github --exclude _site --exclude node_modules -cf - . | tar -C _site -xf -
+          test -f _site/.nojekyll
+          test -f _site/index.html
+          test -f _site/dashboard-offline.html
+          test -f _site/vendor/xlsx.full.min.js
+          grep -q 'href="src/style.css"' _site/index.html
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
