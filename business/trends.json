@@ -1,0 +1,477 @@
+{
+  "title_th": "เรดาร์ธุรกิจอาหาร เครื่องดื่ม และมะพร้าว",
+  "title_en": "Malee Business Trends Radar",
+  "checked_ict": "2026-11-08",
+  "scope": "Thailand-first, global context; public-source research snapshot, not live feed",
+  "sources": {
+    "dit": {
+      "title": "DIT: The Harmony Model for aromatic coconut community packhouses",
+      "published": "2026-08-28",
+      "url": "https://www.dit.go.th/th/news/press-releases/2569/ข-าวเลขท-2122569-กรมการค-าภายในสานต-อนโยบาย-ศ-ภจ-ใช-the-harmony-model-ยกระด-บล-งช-มชนมะพร-าวน-ำหอม-เช-อมผลผล-ต-แปรร-ป-ขยายตลาด-28-ส-งหาคม-2569/",
+      "type": "official government release"
+    },
+    "nation": {
+      "title": "DBD finds 15 fruit-packing firms suspected of using Thai nominee shareholders",
+      "published": "2026-03-06",
+      "url": "https://www.nationthailand.com/business/economy/40063420",
+      "type": "credible reporting of DBD; older context"
+    },
+    "malee": {
+      "title": "Malee H1 2026 business update / New S-Curve",
+      "published": "2026-08-17",
+      "period": "January–June 2026",
+      "url": "https://www.maleegroup.com/corporate_news/malee-new-s-curve-h1-2026-revenue-growth/",
+      "type": "company self-report"
+    },
+    "fda": {
+      "title": "Thai FDA Food Division: Ministry of Public Health notifications register",
+      "published": null,
+      "url": "https://food.fda.moph.go.th/food-law/category/announcement-of-the-ministry-of-public-health-1",
+      "type": "official legal index; effective dates verified, full legal texts not reviewed"
+    },
+    "fao": {
+      "title": "FAO Food Price Index edges down in October amid subdued demand",
+      "published": "2026-11-06",
+      "period": "October 2026",
+      "url": "https://www.fao.org/newsroom/detail/fao-food-price-index-edges-down-in-october-amid-subdued-demand/en",
+      "type": "official international monthly release"
+    },
+    "sappe": {
+      "title": "SAPPE showcases product innovations at SIAL Paris 2026",
+      "published": "2026-10-20",
+      "date_note": "Date verified in official news index; article dates exhibition 17–21 October",
+      "url": "https://www.sappe.com/en/sappe-showcases-product-innovations-at-sial-paris-2026-mogu-mogu-leads-a-diverse-new-product-lineup-on-the-global-stage/",
+      "type": "competitor self-report",
+      "date_source": "https://www.sappe.com/en/news-en/"
+    },
+    "pet": {
+      "title": "Thai Coconut grows global market presence with Sidel aseptic PET line",
+      "published": "2026-06-08",
+      "url": "https://www.petnology.com/online/news-detail/thai-coconut-grows-its-global-market-presence-with-an-aseptic-pet-line-from-sidel",
+      "type": "trade publication carrying supplier/customer statements"
+    },
+    "orange": {
+      "title": "Orange juice demand set to fall despite lower prices — Rabobank",
+      "published": "2026-06-04",
+      "period": "2026/27 forecast, not realised November outcome",
+      "url": "https://www.fruitnet.com/fruitnet/orange-juice-demand-set-to-fall-despite-lower-prices/271705.article",
+      "type": "trade reporting of Rabobank forecast"
+    },
+    "krungsri": {
+      "title": "Industry Outlook 2026–2028: Beverage Industry",
+      "published": "2026-06-15",
+      "period": "Q1 2026 observations / 2026–28 forecasts",
+      "url": "https://www.krungsri.com/en/research/industry/industry-outlook/food-beverage/beverage/io/beverage-2026",
+      "type": "bank industry research; forecasts distinguished from facts"
+    },
+    "ktc": {
+      "title": "Official Double Day 11.11 campaign",
+      "published": null,
+      "period": "7–13 November 2026 umbrella campaign; platform windows differ",
+      "url": "https://www.ktc.co.th/en/promotion/online-shopping-services/online-shopping/double-day",
+      "type": "official current card/retailer promotion, not Malee promotion"
+    }
+  },
+  "signals": [
+    {
+      "id": "coconut-harvest",
+      "category": "coconut",
+      "title_th": "มะพร้าวน้ำหอม: ยังอยู่ในช่วงผลผลิตมากตามแผนกรมการค้าภายใน",
+      "title_en": "Aromatic coconut: seasonal supply window",
+      "summary_th": "กรมการค้าภายในระบุเมื่อสิงหาคมว่าผลผลิตจะออกมากช่วงสิงหาคม–พฤศจิกายน และคาดว่าความต้องการจากจีนปลายปีอาจชะลอ จึงส่งเสริมการคัดแยก แปรรูป และเชื่อมตลาดผ่านล้งชุมชน",
+      "summary_en": "DIT’s August outlook flags high supply in August–November and possible softer late-year Chinese import demand; it promotes community sorting, processing and market access.",
+      "source_ids": [
+        "dit"
+      ],
+      "scope": "Thailand / China",
+      "freshness": "Trailing Aug outlook covering current Nov window",
+      "relevance_th": "เกี่ยวข้องกับการจัดหาน้ำมะพร้าว คุณภาพวัตถุดิบ และความเสี่ยงพึ่งตลาดเดียว",
+      "action_th": "ทีมจัดซื้อทบทวนสัญญา คุณภาพ และแหล่งที่มา; คอนเทนต์อธิบายการคัดคุณภาพได้หากมีหลักฐานจริง",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "เป็นประมาณการเดือนสิงหาคม ไม่ใช่ราคา/ผลผลิตสดวันนี้; มะพร้าวน้ำหอมสดไม่เท่ากับวัตถุดิบน้ำมะพร้าวทุกชนิด",
+      "evidence_confidence": "Supported with stated limitations",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    },
+    {
+      "id": "coconut-authenticity",
+      "category": "coconut",
+      "title_th": "ที่มาและความแท้ของน้ำมะพร้าวเป็นประเด็นที่ต้องตรวจ",
+      "title_en": "Coconut authenticity and supplier due diligence",
+      "summary_th": "รายงานเดือนมีนาคมอ้าง DBD ว่าพบปัญหาการปลอมปนและการแสดงฉลากน้ำมะพร้าวน้ำหอม รวมถึงข้อสงสัยโครงสร้างผู้ถือหุ้นล้งบางราย",
+      "summary_en": "March reporting of DBD concerns identifies adulteration/labelling risks and suspected nominee structures at some packhouses.",
+      "source_ids": [
+        "nation"
+      ],
+      "scope": "Thailand",
+      "freshness": "Older March context, not new November enforcement",
+      "relevance_th": "เชื่อมกับการรับรองวัตถุดิบและความน่าเชื่อถือทั้งแบรนด์และ OEM",
+      "action_th": "ตรวจสอบย้อนกลับและเอกสารซัพพลายเออร์; ทำ label-literacy โดยไม่กล่าวหาผู้อื่น",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "ข้อสงสัยไม่ใช่คำพิพากษา; ห้ามพาดพิงว่ามาลีหรือคู่แข่งรายใดเกี่ยวข้อง; ไม่มีราคาปัจจุบันที่ตรวจสอบได้",
+      "evidence_confidence": "Supported with stated limitations",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    },
+    {
+      "id": "coco-matcha",
+      "category": "products",
+      "title_th": "น้ำมะพร้าวจับคู่มัทฉะ: ตัวอย่างนวัตกรรมที่มาลีรายงานแล้ว",
+      "title_en": "Coconut + matcha is a documented Malee innovation",
+      "summary_th": "มาลีรายงานครึ่งปีแรกว่า Malee COCO Matcha เริ่มวางขายในโมเดิร์นเทรดและช่วยหนุนธุรกิจน้ำมะพร้าวของแบรนด์",
+      "summary_en": "Malee’s H1 release says COCO Matcha entered modern trade and supported its branded coconut-water business.",
+      "source_ids": [
+        "malee"
+      ],
+      "scope": "Thailand",
+      "freshness": "Trailing H1 results, August publication",
+      "relevance_th": "เห็นทิศทางรสชาติที่เชื่อมเครื่องดื่มมะพร้าวกับโอกาสในกลุ่มชา",
+      "action_th": "ทดสอบคำถามเรื่องรสชาติและวิธีเสิร์ฟ หลังยืนยัน SKU/ช่องทางปัจจุบัน",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "คำกล่าวบริษัทไม่ใช่หลักฐานว่ามัทฉะกำลังไวรัลเดือนพฤศจิกายน; อย่าอ้างผลต่อสุขภาพหรือยอดขายปัจจุบัน",
+      "evidence_confidence": "Supported with stated limitations",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    },
+    {
+      "id": "cmg-dairy-coffee",
+      "category": "oem",
+      "title_th": "CMG นมและกาแฟกระป๋องยังเป็นฐานธุรกิจสำคัญ",
+      "title_en": "Dairy and canned coffee matter for CMG",
+      "summary_th": "มาลีระบุว่าธุรกิจรับจ้างผลิตครึ่งปีแรกได้แรงหนุนจากนมและกาแฟกระป๋อง พร้อมวางแผนพัฒนาผลิตภัณฑ์จากพืช",
+      "summary_en": "Malee reports H1 CMG support from dairy and canned coffee, alongside plans for plant-based product development.",
+      "source_ids": [
+        "malee"
+      ],
+      "scope": "Thailand / international customers",
+      "freshness": "Trailing H1 company report",
+      "relevance_th": "หน้าแนวโน้มควรครอบคลุม OEM/CMG ไม่ใช่น้ำผลไม้กับน้ำมะพร้าวเท่านั้น",
+      "action_th": "จัดทำ capability story แบบไม่เปิดชื่อลูกค้า สูตร หรือกำลังการผลิตที่ไม่เป็นสาธารณะ",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "แผน plant-based ไม่ใช่คำสั่งซื้อที่ได้รับแล้ว; นมและ plant-based ไม่ใช่ผลิตภัณฑ์ที่เทียบโภชนาการแทนกันได้อัตโนมัติ",
+      "evidence_confidence": "Supported with stated limitations",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    },
+    {
+      "id": "export-diversification",
+      "category": "trade",
+      "title_th": "กระจายตลาด: มะพร้าวกับนมกัมพูชามีโจทย์ต่างกัน",
+      "title_en": "Export mix: coconut opportunity versus Cambodia exposure",
+      "summary_th": "มาลีรายงานผลกระทบชายแดนต่อสินค้านมและผลไม้กระป๋องในครึ่งปีแรก ขณะระบุการเติบโตของน้ำมะพร้าวในจีนและเกาหลีใต้และแผนกระจายตลาด",
+      "summary_en": "Malee’s H1 update describes border-related weakness in dairy/canned fruit, coconut-water growth in China and South Korea, and diversification plans.",
+      "source_ids": [
+        "malee"
+      ],
+      "scope": "Thailand / Cambodia / China / South Korea",
+      "freshness": "Trailing H1 report; current border status not verified",
+      "relevance_th": "เกี่ยวกับ mix รายได้ ความเสี่ยงลูกค้า และลำดับความสำคัญตลาดส่งออก",
+      "action_th": "แยก watchlist ตามประเทศและหมวดสินค้า; ทีมส่งออกยืนยันสถานะด่านและลูกค้าก่อนใช้วางแผน",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "อย่าอ้างว่าด่านยังปิดวันนี้หรือยอดส่งออกเดือนล่าสุดเติบโต; ไม่ใช้ภาพหรือชื่อพรีเซ็นเตอร์โดยไม่มีสิทธิ",
+      "evidence_confidence": "Supported with stated limitations",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    },
+    {
+      "id": "upcycling",
+      "category": "innovation",
+      "title_th": "เพิ่มมูลค่าวัสดุเกษตรเหลือใช้: โอกาสฝั่ง B2B",
+      "title_en": "Agricultural by-products as a B2B innovation route",
+      "summary_th": "มาลีระบุว่า MAS ใช้แนวทาง upcycling พัฒนาสารออกฤทธิ์มูลค่าสูงและขยายฐานลูกค้า B2B",
+      "summary_en": "Malee reports MAS development of higher-value active ingredients from agricultural by-products and B2B customer expansion.",
+      "source_ids": [
+        "malee"
+      ],
+      "scope": "Thailand / global B2B",
+      "freshness": "Trailing August company statement",
+      "relevance_th": "เกี่ยวกับธุรกิจส่วนต่อยอดนอกเครื่องดื่มสำเร็จรูป",
+      "action_th": "อธิบายกระบวนการเพิ่มมูลค่าที่ตรวจสอบได้ แยกจากสรรพคุณสินค้าอุปโภคบริโภค",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "ไม่เท่ากับพิสูจน์ประสิทธิผลทางคลินิก; ห้ามอ้างลดคาร์บอน/zero waste หรือผลรักษาโดยไม่มีหลักฐานและ Legal",
+      "evidence_confidence": "Supported with stated limitations",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    },
+    {
+      "id": "label-update",
+      "category": "regulation",
+      "title_th": "ฉลากอาหาร: อย. แสดงกฎฉบับใหม่มีผล 31 ตุลาคม",
+      "title_en": "Food-label amendment listed effective 31 October",
+      "summary_th": "ทะเบียนกฎหมายกองอาหารระบุประกาศฉบับที่ 474 พ.ศ.2569 เรื่องการแสดงฉลากอาหารในภาชนะบรรจุ (ฉบับที่ 2) มีผล 31 ตุลาคม 2569",
+      "summary_en": "The Thai FDA legal register lists Notification 474 on packaged-food labelling as in force from 31 October 2026.",
+      "source_ids": [
+        "fda"
+      ],
+      "scope": "Thailand",
+      "freshness": "Current: effective 2026-10-31; publication date not established",
+      "relevance_th": "อาจเกี่ยวกับ artwork บรรจุภัณฑ์และข้อความในคอนเทนต์",
+      "action_th": "ส่งให้ทีม Regulatory ตรวจข้อกำหนด ข้อยกเว้น และระยะเปลี่ยนผ่านจากต้นฉบับก่อนแก้ pack",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "ตรวจเพียงทะเบียนทางการ ยังไม่ได้วิเคราะห์เนื้อกฎหมาย; ไม่อ้างว่าทุก SKU ต้องเปลี่ยนทันที",
+      "evidence_confidence": "Official index verified; legal interpretation pending",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    },
+    {
+      "id": "sealed-beverage",
+      "category": "regulation",
+      "title_th": "เครื่องดื่มปิดสนิท: ทบทวนกฎฉบับ 473",
+      "title_en": "Sealed-beverage rule needs regulatory review",
+      "summary_th": "ทะเบียน อย. ระบุประกาศฉบับที่ 473 พ.ศ.2569 เรื่องเครื่องดื่มในภาชนะบรรจุที่ปิดสนิท (ฉบับที่ 4) มีผล 17 กันยายน 2569; ยังมีฉบับ 469 เรื่องอาหารปิดสนิทมีผล 19 พฤษภาคม",
+      "summary_en": "FDA lists sealed-beverage Notification 473 effective 17 September 2026 and sealed-food Notification 469 effective 19 May.",
+      "source_ids": [
+        "fda"
+      ],
+      "scope": "Thailand",
+      "freshness": "Recent rule 2026-09-17 plus May context",
+      "relevance_th": "เกี่ยวกับน้ำผลไม้ น้ำมะพร้าว และผลิตภัณฑ์บรรจุกระป๋องในขอบเขตที่กฎหมายกำหนด",
+      "action_th": "ทำ compliance checklist แยกน้ำผลไม้/เครื่องดื่ม/ผลไม้กระป๋อง ให้ Regulatory ระบุฉบับที่ใช้จริง",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "ไม่มีข้อสรุปเนื้อหาเรื่องสัดส่วนน้ำผลไม้ วิธีตั้งชื่อ หรือ deadline จากทะเบียนเพียงอย่างเดียว",
+      "evidence_confidence": "Official index verified; full-text application pending",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    },
+    {
+      "id": "sugar-input",
+      "category": "inputs",
+      "title_th": "น้ำตาลโลกขึ้น แม้ดัชนีอาหารรวมลด",
+      "title_en": "Sugar rises even as the broad food index falls",
+      "summary_th": "FAO รายงานวันที่ 6 พฤศจิกายนว่าดัชนีน้ำตาลเดือนตุลาคมเพิ่มต่อเนื่องเป็นเดือนที่สี่ ขณะที่ดัชนีอาหารรวมลดจากกันยายน",
+      "summary_en": "FAO’s 6 November release reports a fourth monthly rise in its October sugar index despite a decline in the overall food index.",
+      "source_ids": [
+        "fao"
+      ],
+      "scope": "Global / Thai procurement relevance",
+      "freshness": "Current release 2026-11-06, October observations",
+      "relevance_th": "สินค้าแต่ละสูตรมีความเสี่ยงต้นทุนไม่เท่ากัน; ดู exposure จริงก่อนสรุป margin",
+      "action_th": "จัดซื้อทบทวนสูตร สัญญาน้ำตาล และงวดปรับราคา; คอนเทนต์ไม่จำเป็นต้องกล่าวเรื่องต้นทุน",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "ดัชนีโลกไม่ใช่ราคาน้ำตาลในสัญญามาลี; no-added-sugar ไม่เท่ากับไม่มีน้ำตาล; tax rates ต้องตรวจแยก",
+      "evidence_confidence": "Supported with stated limitations",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    },
+    {
+      "id": "dairy-divergence",
+      "category": "inputs",
+      "title_th": "ดัชนีนมลด แต่ราคานมผงไม่ได้ลดตามทั้งหมด",
+      "title_en": "Dairy headline falls, milk powder diverges",
+      "summary_th": "FAO ระบุว่าดัชนีนมเดือนตุลาคมลดเพราะเนยและชีส ขณะที่ราคานมผงยังเพิ่ม",
+      "summary_en": "FAO reports that butter and cheese drove the October dairy-index decline while milk powder quotations continued to rise.",
+      "source_ids": [
+        "fao"
+      ],
+      "scope": "Global / dairy and CMG",
+      "freshness": "Current release 2026-11-06, October observations",
+      "relevance_th": "สำคัญต่อผู้ใช้วัตถุดิบนมผงและ CMG; ดัชนีรวมอาจกลบภาระต้นทุนจริง",
+      "action_th": "แยกตารางติดตาม SMP/WMP/น้ำนมดิบตามสูตร; Procurement ยืนยันฐานราคาและค่าเงิน",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "ไม่อนุมานว่าต้นทุน UHT ไทยหรือมาลีลด; ไม่มีข้อมูลสัญญาจัดซื้อจริง",
+      "evidence_confidence": "Supported with stated limitations",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    },
+    {
+      "id": "sappe-formats",
+      "category": "competition",
+      "title_th": "คู่แข่งขยายจากเครื่องดื่มไปหลายฟอร์แมต",
+      "title_en": "Competitor moves across sugar and texture formats",
+      "summary_th": "SAPPE ระบุที่ SIAL Paris ตุลาคมว่ามี Mogu Mogu Zero Sugar, Jelly, Gummy, Candy และ Iced Tea พร้อมนำเสนอ All Coco",
+      "summary_en": "SAPPE’s October SIAL announcement describes Mogu Mogu Zero Sugar, jelly, gummy, candy and iced-tea offerings, alongside All Coco.",
+      "source_ids": [
+        "sappe"
+      ],
+      "scope": "Thailand brands / international trade",
+      "freshness": "Recent publication 2026-10-20",
+      "relevance_th": "คู่แข่งแข่งขันทั้งรสชาติ texture โอกาสบริโภค และพอร์ตส่งออก",
+      "action_th": "ทำ competitor assortment board จากข้อมูลสาธารณะ; ทดสอบ concept occasion ไม่ลอก artwork",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "งานแสดงสินค้าไม่เท่ากับจำหน่ายทั่วไทยหรือขายดี; ห้ามยกสรรพคุณคู่แข่งเป็นของมาลี",
+      "evidence_confidence": "Supported with stated limitations",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    },
+    {
+      "id": "aseptic-pet",
+      "category": "competition",
+      "title_th": "คู่แข่งมะพร้าวลงทุนฟอร์แมต PET ปลอดเชื้อ",
+      "title_en": "Aseptic PET broadens coconut packaging options",
+      "summary_th": "ข่าวการค้าเดือนมิถุนายนระบุ Thai Coconut ใช้ไลน์ PET ปลอดเชื้อของ Sidel สำหรับน้ำมะพร้าวทั้งแบบนิ่งและซ่า โดยเน้นส่งออก",
+      "summary_en": "June trade reporting describes Thai Coconut adopting Sidel aseptic PET for still and carbonated coconut drinks, with an export focus.",
+      "source_ids": [
+        "pet"
+      ],
+      "scope": "Thailand / global export",
+      "freshness": "Older June capability context",
+      "relevance_th": "สะท้อนการแข่งขันด้านบรรจุภัณฑ์และความยืดหยุ่นการผลิต/OEM",
+      "action_th": "เทียบข้อดีของ pack ตาม occasion, shelf life และ total cost โดยใช้ข้อกำหนดที่ตรวจสอบแล้ว",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "เป็นคำกล่าวผู้ขาย/ลูกค้า ไม่ใช่ผล audit อิสระ; ไม่อ้าง FDA-approved สำหรับทุก SKU; ไม่อนุมานยอดใช้กำลังผลิตปัจจุบัน",
+      "evidence_confidence": "Supported with stated limitations",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    },
+    {
+      "id": "orange-supply-demand",
+      "category": "fruit",
+      "title_th": "น้ำส้ม: อย่าดูอุปทานโดยไม่ดูราคาขายปลีกและดีมานด์",
+      "title_en": "Orange juice: supply is only half the picture",
+      "summary_th": "Fruitnet รายงานคาดการณ์ Rabobank เดือนมิถุนายนว่า 2026/27 อุปทานน้ำส้มอาจลดจากสภาพอากาศและโรค greening ขณะที่ราคาขายปลีกสูงกดความต้องการ",
+      "summary_en": "June reporting of Rabobank’s 2026/27 outlook flags lower orange-juice supply due to weather/greening alongside demand pressure from high retail prices.",
+      "source_ids": [
+        "orange"
+      ],
+      "scope": "Global / Brazil / export buyers",
+      "freshness": "Older June forecast for 2026/27, not latest harvest update",
+      "relevance_th": "เกี่ยวกับวัตถุดิบน้ำส้ม การวางราคา และ product mix น้ำผลไม้",
+      "action_th": "จัดซื้อขออัปเดต crop และ quotation; การตลาดเน้นรสชาติ occasion และคุณค่าที่พิสูจน์ได้",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "เป็น forecast ไม่ใช่ยอดจริง; ราคา futures ไม่ใช่ต้นทุนส่งถึงโรงงาน; ไม่มีข้อมูลพฤศจิกายนหรือ pineapple series ที่ยืนยัน",
+      "evidence_confidence": "Supported with stated limitations",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    },
+    {
+      "id": "demand-packaging",
+      "category": "demand",
+      "title_th": "ความสะดวกและฟังก์ชันมีโอกาส แต่กำลังซื้อกับต้นทุนยังต้องระวัง",
+      "title_en": "Convenience and function meet value and cost constraints",
+      "summary_th": "Krungsri Research เดือนมิถุนายนมองโอกาส functional และน้ำตาลลด รวมทั้งร้านสะดวกซื้อ แต่เตือนกำลังซื้อ ต้นทุนพลังงาน บรรจุภัณฑ์ และโลจิสติกส์",
+      "summary_en": "Krungsri’s June outlook identifies functional/reduced-sugar innovation and convenience retail opportunities, alongside purchasing-power, energy, packaging and logistics risks.",
+      "source_ids": [
+        "krungsri"
+      ],
+      "scope": "Thailand / ASEAN export context",
+      "freshness": "Older June research, 2026–28 outlook",
+      "relevance_th": "ช่วยตั้งสมมติฐาน pack-price และ proposition โดยไม่เหมารวมว่าพรีเมียมชนะทุกกลุ่ม",
+      "action_th": "ทดสอบ pack/price occasion แบบเล็กกับผู้บริโภคและร้านค้า; เน้นความชัดของฉลาก",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "ไม่ใช่ข้อมูลดีมานด์เดือนล่าสุด; functional/protein claim ต้องมีสูตรและ Regulatory; ไม่มี evidence ว่า plant-based โตทั้งตลาด",
+      "evidence_confidence": "Supported with stated limitations",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    },
+    {
+      "id": "1111-channel",
+      "category": "channels",
+      "title_th": "11.11 เป็นหน้าต่างค้าขายที่ยืนยันได้ ไม่ใช่หลักฐานยอดขายมาลี",
+      "title_en": "11.11 is a verified commerce window, not a Malee sales result",
+      "summary_th": "KTC ระบุโปร Double Day พฤศจิกายนกับ Shopee, Lazada และ TikTok Shop โดยช่วงเวลาแตกต่างกันตามแพลตฟอร์ม",
+      "summary_en": "KTC’s current November Double Day page lists Shopee, Lazada and TikTok Shop offers with platform-specific windows.",
+      "source_ids": [
+        "ktc"
+      ],
+      "scope": "Thailand",
+      "freshness": "Current campaign week, November 2026",
+      "relevance_th": "เกี่ยวกับหน้า official store เนื้อหาช่วยเลือก pack และการประสาน Sales",
+      "action_th": "ตรวจราคา stock เงื่อนไข และลิงก์ร้านที่ได้รับอนุมัติ; ทำ buying checklist แทนใส่ส่วนลดที่ยังไม่ยืนยัน",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "ไม่ยืนยันว่ามาลีร่วมโปร; โปรบัตรไม่ใช่ส่วนลดทุกสินค้า; ไม่มียอดขาย/GMV หรือ conversion ที่ตรวจสอบได้",
+      "evidence_confidence": "Supported with stated limitations",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    }
+  ],
+  "keyword_baskets": [
+    {
+      "id": "coconut",
+      "terms": [
+        "น้ำมะพร้าว",
+        "มะพร้าวน้ำหอม",
+        "coconut water",
+        "aromatic coconut"
+      ],
+      "note": "Proposed research basket, not observed related queries or search volumes",
+      "google_trends_url": "https://trends.google.com/trends/explore?date=today+12-m&geo=TH&hl=th&q=%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A1%E0%B8%B0%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7%2C%E0%B8%A1%E0%B8%B0%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%AB%E0%B8%AD%E0%B8%A1%2Ccoconut+water%2Caromatic+coconut",
+      "series": null
+    },
+    {
+      "id": "juice",
+      "terms": [
+        "น้ำผลไม้",
+        "น้ำส้ม",
+        "fruit juice",
+        "orange juice"
+      ],
+      "note": "Proposed research basket, not observed related queries or search volumes",
+      "google_trends_url": "https://trends.google.com/trends/explore?date=today+12-m&geo=TH&hl=th&q=%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%9C%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%89%2C%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%AA%E0%B9%89%E0%B8%A1%2Cfruit+juice%2Corange+juice",
+      "series": null
+    },
+    {
+      "id": "dairy-plant",
+      "terms": [
+        "นมยูเอชที",
+        "นมจากพืช",
+        "นมโอ๊ต",
+        "plant based milk"
+      ],
+      "note": "Proposed research basket, not observed related queries or search volumes",
+      "google_trends_url": "https://trends.google.com/trends/explore?date=today+12-m&geo=TH&hl=th&q=%E0%B8%99%E0%B8%A1%E0%B8%A2%E0%B8%B9%E0%B9%80%E0%B8%AD%E0%B8%8A%E0%B8%97%E0%B8%B5%2C%E0%B8%99%E0%B8%A1%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%9E%E0%B8%B7%E0%B8%8A%2C%E0%B8%99%E0%B8%A1%E0%B9%82%E0%B8%AD%E0%B9%8A%E0%B8%95%2Cplant+based+milk",
+      "series": null
+    },
+    {
+      "id": "flavours",
+      "terms": [
+        "มัทฉะ",
+        "น้ำมะพร้าวมัทฉะ",
+        "matcha",
+        "coconut matcha"
+      ],
+      "note": "Proposed research basket, not observed related queries or search volumes",
+      "google_trends_url": "https://trends.google.com/trends/explore?date=today+12-m&geo=TH&hl=th&q=%E0%B8%A1%E0%B8%B1%E0%B8%97%E0%B8%89%E0%B8%B0%2C%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A1%E0%B8%B0%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%A1%E0%B8%B1%E0%B8%97%E0%B8%89%E0%B8%B0%2Cmatcha%2Ccoconut+matcha",
+      "series": null
+    },
+    {
+      "id": "fruit",
+      "terms": [
+        "ผลไม้กระป๋อง",
+        "สับปะรดกระป๋อง",
+        "canned fruit",
+        "canned pineapple"
+      ],
+      "note": "Proposed research basket, not observed related queries or search volumes",
+      "google_trends_url": "https://trends.google.com/trends/explore?date=today+12-m&geo=TH&hl=th&q=%E0%B8%9C%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9B%E0%B9%8B%E0%B8%AD%E0%B8%87%2C%E0%B8%AA%E0%B8%B1%E0%B8%9A%E0%B8%9B%E0%B8%B0%E0%B8%A3%E0%B8%94%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9B%E0%B9%8B%E0%B8%AD%E0%B8%87%2Ccanned+fruit%2Ccanned+pineapple",
+      "series": null
+    },
+    {
+      "id": "oem",
+      "terms": [
+        "รับผลิตเครื่องดื่ม",
+        "OEM เครื่องดื่ม",
+        "beverage OEM",
+        "private label beverages"
+      ],
+      "note": "Proposed research basket, not observed related queries or search volumes",
+      "google_trends_url": "https://trends.google.com/trends/explore?date=today+12-m&geo=TH&hl=th&q=%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%9C%E0%B8%A5%E0%B8%B4%E0%B8%95%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%94%E0%B8%B7%E0%B9%88%E0%B8%A1%2COEM+%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%94%E0%B8%B7%E0%B9%88%E0%B8%A1%2Cbeverage+OEM%2Cprivate+label+beverages",
+      "series": null
+    },
+    {
+      "id": "brands",
+      "terms": [
+        "มาลี",
+        "Malee Coco",
+        "Tipco",
+        "All Coco",
+        "Mogu Mogu"
+      ],
+      "note": "Proposed research basket, not observed related queries or search volumes",
+      "google_trends_url": "https://trends.google.com/trends/explore?date=today+12-m&geo=TH&hl=th&q=%E0%B8%A1%E0%B8%B2%E0%B8%A5%E0%B8%B5%2CMalee+Coco%2CTipco%2CAll+Coco%2CMogu+Mogu",
+      "series": null
+    },
+    {
+      "id": "supply",
+      "terms": [
+        "ราคามะพร้าว",
+        "ราคาน้ำตาล",
+        "ราคานมผง",
+        "ค่าระวางเรือ"
+      ],
+      "note": "Proposed research basket, not observed related queries or search volumes",
+      "google_trends_url": "https://trends.google.com/trends/explore?date=today+12-m&geo=TH&hl=th&q=%E0%B8%A3%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B8%A1%E0%B8%B0%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7%2C%E0%B8%A3%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95%E0%B8%B2%E0%B8%A5%2C%E0%B8%A3%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B8%99%E0%B8%A1%E0%B8%9C%E0%B8%87%2C%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%A3%E0%B8%B0%E0%B8%A7%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B8%AD",
+      "series": null
+    }
+  ],
+  "google_trends_data_status": "No series retrieved; links only. No scores, volumes or charts to fabricate."
+}

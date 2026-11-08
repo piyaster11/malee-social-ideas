@@ -32,7 +32,13 @@ jobs:
           test -f _site/index.html
           test -f _site/dashboard-offline.html
           test -f _site/vendor/xlsx.full.min.js
+          test -f _site/business-trends.html
+          test -f _site/business-trends-offline.html
+          test -f _site/business/trends.json
+          test -f _site/src/biz.js
           grep -q 'href="src/style.css"' _site/index.html
+          grep -q 'business-trends.html' _site/index.html
+          grep -q 'href="src/biz.css"' _site/business-trends.html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

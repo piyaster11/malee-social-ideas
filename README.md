@@ -26,6 +26,9 @@ The Results section stays labelled **EXAMPLE** until someone uploads a file in t
 - `src/app.js`, `src/page.html`, `src/style.css`
 - `index.html` — built page, project-relative assets
 - `dashboard-offline.html` — one file, including SheetJS, for use with the network off
+- `business-trends.html` — F&B, coconut and value-chain radar for the same 8 Nov 2026 snapshot. It is a separate page, linked from the top of Social Ideas. There are no search-popularity charts: no numerical series was retrieved.
+- `business-trends-offline.html` — the same radar in one file
+- `business/trends.json` — the 15 watchpoints and 10 sources
 - `vendor/xlsx.full.min.js` — SheetJS Community Edition 0.20.3 (Apache-2.0). See `vendor/NOTICE-SheetJS.txt`
 
 ## Build and test
