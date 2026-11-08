@@ -28,7 +28,7 @@ function get(url){
 }
 
 function staticChecks(){
-  for(const f of ["src/data.js","src/gen.js","src/archive.js","src/app.js","build/test.js"]){
+  for(const f of ["src/data.js","src/gen.js","src/archive.js","src/app.js","src/biz.js","src/biz-meta.js","src/biz-data.js","build/test.js"]){
     execFileSync("node", ["--check", f], {cwd:ROOT, stdio:"inherit"});
   }
   check(true, "node --check on source");
@@ -67,6 +67,16 @@ function staticChecks(){
   const themesAt = page.indexOf('id="themes"');
   const easyAt = page.indexOf('id="easy"');
   check(themesAt>0 && easyAt>themesAt && page.slice(themesAt, easyAt).indexOf("<section")===page.slice(themesAt, easyAt).lastIndexOf("<section"), "themes section sits directly above easy posts");
+  const trends = fs.readFileSync(path.join(ROOT,"business-trends.html"), "utf8");
+  const raw = JSON.parse(fs.readFileSync(path.join(ROOT,"business/trends.json"), "utf8"));
+  check(raw.signals.length===15 && Object.keys(raw.sources).length===10 && raw.keyword_baskets.length===8, "15 watchpoints, 10 sources, 8 baskets");
+  check(raw.signals.every(s=>s.numeric_series==null) && raw.keyword_baskets.every(b=>b.series==null), "no numeric series in the snapshot");
+  check(index.includes('href="business-trends.html"') && offline.includes('href="business-trends-offline.html"'), "social pages link to the radar");
+  check(trends.includes('href="src/biz.css"') && trends.includes('src="src/biz.js"') && trends.includes("เปิดใน Google Trends / Open in Google Trends"), "trends page is relative and names the external link");
+  check(!/sparkline|heatmap|gauge|\/100/.test(trends) && !trends.includes("numeric_series\":"), "trends page does not ship a score chart");
+  const dated = ["business-trends.html","src/biz-meta.js","src/biz-data.js"].map(f=>fs.readFileSync(path.join(ROOT,f),"utf8")).join("\n");
+  const future = (dated.match(/20\d\d-\d\d-\d\d/g)||[]).filter(d=>d>"2026-11-08");
+  check(future.length===0, "no ISO date after the 8 Nov check: "+[...new Set(future)].join(","));
 }
 
 function mime(p){
@@ -202,7 +212,13 @@ async function newPage(cdp, url){
     fs.writeFileSync(file, Buffer.from(r.data, "base64"));
     console.log("shot "+file);
   }
-  return {sessionId, reqs, ev, open, shot, cdp};
+  async function shotClip(file, width, height){
+    const r = await cdp.send("Page.captureScreenshot", {format:"png", captureBeyondViewport:true, clip:{x:0,y:0,width:width,height:height,scale:1}}, sessionId);
+    fs.mkdirSync(path.dirname(file), {recursive:true});
+    fs.writeFileSync(file, Buffer.from(r.data, "base64"));
+    console.log("shot "+file);
+  }
+  return {sessionId, reqs, ev, open, shot, shotClip, cdp};
 }
 
 async function browserChecks(){
@@ -358,6 +374,11 @@ async function browserChecks(){
     check(await off.ev(`!!window.XLSX && document.body.innerText.includes("9–15 พ.ย. 2569") && document.querySelector("#dataBadge").textContent.includes("EXAMPLE")`), "offline file works with the network disabled");
     const offReqs = off.reqs.filter(u=>/^https?:/.test(u));
     check(offReqs.length===0, "offline file made no http requests, saw "+offReqs.length);
+    check(await page.ev(`!!document.querySelector('a[href="business-trends.html"]')`), "social page links to the radar");
+    const socialKeys = await page.ev(`JSON.stringify(Object.keys(localStorage).filter(k=>k.indexOf("malee-social-")===0).sort())`);
+    await trendsChecks(chrome, base);
+    const socialKeysAfter = await page.ev(`JSON.stringify(Object.keys(localStorage).filter(k=>k.indexOf("malee-social-")===0).sort())`);
+    check(socialKeys===socialKeysAfter, "opening the radar does not change social localStorage keys");
   } finally {
     chrome.cdp.close();
     chrome.proc.kill("SIGKILL");
@@ -365,6 +386,108 @@ async function browserChecks(){
     fs.rmSync(parent, {recursive:true, force:true});
     fs.rmSync(chrome.dir, {recursive:true, force:true});
   }
+}
+
+async function trendsChecks(chrome, base){
+  const page = await newPage(chrome.cdp, "about:blank");
+  await page.cdp.send("Emulation.setDeviceMetricsOverride", {width:1280, height:900, deviceScaleFactor:1, mobile:false}, page.sessionId);
+  await page.open(base+"business-trends.html");
+  const reqs = page.reqs.filter(u=>/^https?:/.test(u) && !u.includes("favicon"));
+  check(reqs.every(u=>u.startsWith(base)), "radar requests stay on the project path");
+  check(!reqs.some(u=>/google|gstatic/.test(u)), "radar does not call Google while loading");
+  const assets = await page.ev(`[...document.querySelectorAll('link[rel=stylesheet],script[src]')].map(el=>el.getAttribute('href')||el.getAttribute('src'))`);
+  check(assets.length>=4 && assets.every(u=>u && !u.startsWith("/") && !/^https?:/.test(u)), "radar assets are project-relative: "+assets.join(", "));
+  check(await page.ev(`document.querySelectorAll("#bizList article").length===15`), "15 cards render");
+  check(await page.ev(`document.querySelector("#homeLink").getAttribute("href")==="index.html"`), "radar links back to Social Ideas");
+  check(await page.ev(`document.body.innerText.includes("not a value of zero")`), "missing series is not called zero");
+  check(await page.ev(`document.querySelectorAll("svg").length===0`), "radar has no svg chart");
+  check(await page.ev(`!/\\b\\d{1,3}\\/100\\b/.test(document.body.innerText)`), "radar has no n/100 score");
+  async function count(){
+    const t = await page.ev(`document.querySelector("#bizCount").textContent`);
+    const m = String(t).match(/^(\d+) of/);
+    return m?+m[1]:-1;
+  }
+  check(await count()===15, "default count is 15");
+  async function search(q){
+    await page.ev(`(()=>{const el=document.querySelector("#bizQ"); el.value=${JSON.stringify(q)}; el.dispatchEvent(new Event("input",{bubbles:true})); return true})()`);
+  }
+  await search("มะพร้าว");
+  const th = await count();
+  await search("coconut");
+  const enC = await count();
+  check(th>0 && th===enC && await page.ev(`!!document.getElementById("coconut-harvest")`), "มะพร้าว and coconut match the same cards ("+th+")");
+  await page.ev(`document.querySelector("#bizReset").click()`);
+  await search("นม");
+  const milk = await count();
+  await search("dairy");
+  check(milk>0 && milk===await count(), "นม and dairy match the same cards ("+milk+")");
+  await page.ev(`document.querySelector("#bizReset").click()`);
+  await search("CMG");
+  check(await count()>0 && await page.ev(`!!document.getElementById("cmg-dairy-coffee")`), "CMG search finds the CMG card");
+  await page.ev(`document.querySelector("#bizReset").click()`);
+  await search("ฉลาก");
+  check(await count()>0 && await page.ev(`!!document.getElementById("label-update")`), "ฉลาก search finds the label card");
+  await page.ev(`document.querySelector("#bizReset").click()`);
+  await page.ev(`document.querySelector("#bizCat").value="regulation"; document.querySelector("#bizCat").dispatchEvent(new Event("change",{bubbles:true}))`);
+  await page.ev(`document.querySelector("#bizFresh").value="recent"; document.querySelector("#bizFresh").dispatchEvent(new Event("change",{bubbles:true}))`);
+  check(await count()===1 && await page.ev(`!!document.getElementById("label-update") && !document.getElementById("sealed-beverage")`), "regulation plus current window keeps only the label rule");
+  const held = await count();
+  await page.ev(`document.querySelector("#bizLangEn").click()`);
+  check(await page.ev(`document.body.classList.contains("lang-en") && document.querySelector("#bizCat").value==="regulation" && document.querySelector("#bizFresh").value==="recent"`), "English toggle keeps the filters");
+  check(await count()===held, "English toggle keeps the count");
+  await page.ev(`document.querySelector("#bizLangTh").click()`);
+  await page.ev(`document.querySelector("#bizQ").dispatchEvent(new KeyboardEvent("keydown",{key:"Enter",bubbles:true,cancelable:true}))`);
+  await page.ev(`(()=>{const el=document.querySelector("#bizQ"); el.value="zzzz-no-match"; el.dispatchEvent(new KeyboardEvent("keydown",{key:"Enter",bubbles:true})); return true})()`);
+  check(await count()===0, "Enter applies a query that matches nothing");
+  await page.ev(`document.querySelector("#bizReset").click()`);
+  check(await count()===15 && await page.ev(`document.querySelector("#bizQ").value===""`), "reset restores all 15");
+  await page.ev(`(()=>{const b=document.querySelector('[data-toggle="sugar-input"]'); b.focus(); b.dispatchEvent(new KeyboardEvent("keydown",{key:"Enter",bubbles:true,cancelable:true})); return b.getAttribute("aria-expanded");})()`);
+  check(await page.ev(`document.querySelector('[data-toggle="sugar-input"]').getAttribute("aria-expanded")==="true"`), "Enter on the card button expands it");
+  await page.ev(`document.querySelector('[data-toggle="sugar-input"]').dispatchEvent(new KeyboardEvent("keydown",{key:"Enter",bubbles:true,cancelable:true}))`);
+  check(await page.ev(`document.querySelector("#p-sugar-input").hidden===true`), "Enter closes the card again");
+  await page.ev(`location.hash="#label-update"`);
+  await page.ev("new Promise(r=>setTimeout(r,50))");
+  check(await page.ev(`document.querySelector("#p-label-update").hidden===false`), "hash opens the label card");
+  await page.ev(`document.querySelector('[data-basket="coconut"]').click()`);
+  const href = await page.ev(`document.querySelector("#bizTrends").getAttribute("href")`);
+  const parsed = new URL(href, base);
+  const terms = parsed.searchParams.get("q").split(",");
+  check(parsed.hostname==="trends.google.com" && parsed.searchParams.get("geo")==="TH" && parsed.searchParams.get("date")==="today 12-m", "12-month Thailand trends link");
+  check(terms.length===4 && terms[0]==="น้ำมะพร้าว" && terms.includes("coconut water"), "trends terms stay distinct ("+terms.join(" | ")+")");
+  check(href.includes(encodeURIComponent("น้ำมะพร้าว")), "Thai term is percent-encoded");
+  const href5 = await page.ev(`document.querySelector("#bizTrends5").getAttribute("href")`);
+  check(new URL(href5, base).searchParams.get("date")==="today 5-y", "five-year link uses a different date");
+  await page.ev(`document.querySelector('[data-basket="brands"]').click()`);
+  check(await page.ev(`new URL(document.querySelector("#bizTrends").href).searchParams.get("q").split(",").length===5`), "brands basket stops at 5 terms");
+  await page.ev(`document.querySelector("#bizTerm").value="extra term"; document.querySelector("#bizAdd").click()`);
+  check(await page.ev(`new URL(document.querySelector("#bizTrends").href).searchParams.get("q").split(",").length===5 && /5/.test(document.querySelector("#bizTermMsg").textContent)`), "a sixth term is refused");
+  const badHosts = await page.ev(`(()=>{const allow=["www.dit.go.th","www.nationthailand.com","www.maleegroup.com","food.fda.moph.go.th","www.fao.org","www.sappe.com","www.petnology.com","www.fruitnet.com","www.krungsri.com","www.ktc.co.th","trends.google.com"]; const bad=[]; document.querySelectorAll("a[href]").forEach(a=>{let u; try{u=new URL(a.href);}catch(e){bad.push(a.getAttribute("href")); return;} if(u.host===location.host) return; if(allow.indexOf(u.host)<0) bad.push(u.host);}); return bad;})()`);
+  check(!badHosts.length, "links stay on the source allowlist or this site: "+badHosts.join(", "));
+  check(await page.ev(`document.querySelectorAll("#bizSources tr").length===10`), "source register has 10 rows");
+  check(await page.ev(`[...document.querySelectorAll("#bizSources td")].some(td=>td.textContent.includes("not established"))`), "unknown publication dates stay unknown");
+  check(await page.ev(`document.body.innerText.includes("shared by")`), "shared sources are labelled on the cards");
+  check(await page.ev(`[...document.querySelectorAll("article.bcard")].every(card=>card.querySelector(".fact")&&card.querySelector(".opinion")&&card.textContent.includes("Checked"))`), "every card separates fact, opinion and the check date");
+  check(await page.ev(`(()=>{const h=document.querySelector("#h-label-update"); return h.textContent.includes("ฉลากอาหาร") && h.innerHTML.indexOf("<script")<0;})()`), "titles render as text");
+  let box = await page.ev(`({sw:document.documentElement.scrollWidth,cw:document.documentElement.clientWidth})`);
+  check(box.sw<=box.cw+1, "radar desktop has no page overflow "+box.sw+"/"+box.cw);
+  if(failed===0){
+    await page.ev(`document.querySelector('[data-toggle="1111-channel"]').click()`);
+    await page.ev(`window.scrollTo(0,0)`);
+    await page.shotClip(path.join(ART,"malee_biz_desktop_nov8.png"), 1280, 2100);
+  }
+  await page.cdp.send("Emulation.setDeviceMetricsOverride", {width:375, height:812, deviceScaleFactor:2, mobile:true}, page.sessionId);
+  await page.ev("new Promise(r=>setTimeout(r,250))");
+  box = await page.ev(`({sw:document.documentElement.scrollWidth,cw:document.documentElement.clientWidth})`);
+  check(box.sw<=box.cw+1, "radar 375px has no page overflow "+box.sw+"/"+box.cw);
+  if(failed===0){
+    await page.ev(`window.scrollTo(0,0)`);
+    await page.shotClip(path.join(ART,"malee_biz_mobile_375_nov8.png"), 375, 2400);
+  }
+  const off = await newPage(chrome.cdp, "about:blank");
+  await off.cdp.send("Network.emulateNetworkConditions", {offline:true, latency:0, downloadThroughput:0, uploadThroughput:0}, off.sessionId);
+  await off.open("file://"+path.join(ROOT,"business-trends-offline.html"));
+  check(await off.ev(`document.querySelectorAll("#bizList article").length===15 && document.querySelector("#homeLink").getAttribute("href")==="dashboard-offline.html"`), "offline radar renders with the network disabled");
+  check(off.reqs.filter(u=>/^https?:/.test(u)).length===0, "offline radar made no http requests");
 }
 
 (async function main(){

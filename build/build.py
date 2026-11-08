@@ -54,6 +54,7 @@ def main():
         "<!--__SHEETJS__-->",
         "<!-- SheetJS CE 0.20.3 loads from vendor/xlsx.full.min.js only if an Excel file is uploaded. -->",
     )
+    pages = pages.replace("/*__TRENDS_HREF__*/", "business-trends.html")
     pages = pages.replace(
         "<!--__SCRIPTS__-->",
         "\n".join([
@@ -65,6 +66,7 @@ def main():
     )
 
     offline = fill(page)
+    offline = offline.replace("/*__TRENDS_HREF__*/", "business-trends-offline.html")
     offline = offline.replace("/*__CSS__*/", css)
     offline = offline.replace("<!--__SHEETJS__-->", "<script>\n" + sheet + "\n</script>")
     offline = offline.replace(
@@ -83,8 +85,44 @@ def main():
             raise SystemExit("script tags look truncated in " + name)
     (ROOT / "index.html").write_text(pages, encoding="utf-8")
     (ROOT / "dashboard-offline.html").write_text(offline, encoding="utf-8")
+    write_trends()
     print("index.html %d bytes" % len(pages.encode("utf-8")))
     print("dashboard-offline.html %d bytes" % len(offline.encode("utf-8")))
+
+
+def write_trends():
+    raw = json.loads((ROOT / "business" / "trends.json").read_text(encoding="utf-8"))
+    data_js = "window.BIZ_RAW = " + json.dumps(raw, ensure_ascii=False, indent=2) + ";\n"
+    (ROOT / "src" / "biz-data.js").write_text(data_js, encoding="utf-8")
+    page = (ROOT / "src" / "biz-page.html").read_text(encoding="utf-8")
+    css = (ROOT / "src" / "style.css").read_text(encoding="utf-8")
+    biz_css = (ROOT / "src" / "biz.css").read_text(encoding="utf-8")
+    meta = (ROOT / "src" / "biz-meta.js").read_text(encoding="utf-8")
+    app = (ROOT / "src" / "biz.js").read_text(encoding="utf-8")
+    online = page.replace(
+        "<!--__BIZ_HEAD__-->",
+        '<link rel="stylesheet" href="src/style.css">\n<link rel="stylesheet" href="src/biz.css">',
+    )
+    online = online.replace("/*__HOME__*/", "index.html")
+    online = online.replace(
+        "<!--__BIZ_SCRIPTS__-->",
+        "\n".join([
+            '<script src="src/biz-data.js"></script>',
+            '<script src="src/biz-meta.js"></script>',
+            '<script src="src/biz.js"></script>',
+        ]),
+    )
+    offline = page.replace("<!--__BIZ_HEAD__-->", "<style>\n" + css + "\n" + biz_css + "\n</style>")
+    offline = offline.replace("/*__HOME__*/", "dashboard-offline.html")
+    offline = offline.replace(
+        "<!--__BIZ_SCRIPTS__-->",
+        "<script>\n" + data_js + "\n</script>\n<script>\n" + meta + "\n</script>\n<script>\n" + app + "\n</script>",
+    )
+    for name, html in (("business-trends.html", online), ("business-trends-offline.html", offline)):
+        if "/*__" in html or "__BIZ_" in html:
+            raise SystemExit("unreplaced trends placeholder in " + name)
+        (ROOT / name).write_text(html, encoding="utf-8")
+        print(name, len(html.encode("utf-8")), "bytes")
 
 
 if __name__ == "__main__":

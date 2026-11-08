@@ -1,0 +1,1471 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>เรดาร์ธุรกิจมาลี · Malee Business Trends Radar</title>
+<style>
+:root{--bg:#f6f7f4;--card:#fff;--ink:#1f2937;--mut:#6b7280;--line:#e5e7eb;--brand:#0f766e;--fb:#1877F2;--ig1:#F58529;--ig2:#DD2A7B;--ig3:#8134AF;--tt:#000;--ttc:#25F4EE;--ttr:#FE2C55;--warn:#b45309}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Noto Sans Thai","Noto Sans",system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.5}
+.wrap{max-width:1240px;margin:0 auto;padding:0 16px}
+.th{color:var(--mut);font-weight:500}
+h1 .th{display:block;font-size:.62em;color:#d1fae5}
+.top{background:linear-gradient(135deg,#0f766e,#065f46 60%,#14532d);color:#fff;padding:18px 0 10px;position:sticky;top:0;z-index:20;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.top .sub{margin:4px 0 0;font-size:13px;color:#d1fae5}.top .sub .th{color:#a7f3d0}
+.ttl{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}
+h1{margin:0;font-size:26px;line-height:1.2}
+.badges{display:flex;gap:6px;flex-wrap:wrap}
+.bdg{display:inline-block;font-size:11px;font-weight:700;padding:3px 8px;border-radius:99px;vertical-align:middle;letter-spacing:.02em}
+.bdg.mock{background:#fde68a;color:#78350f}.bdg.own{background:rgba(255,255,255,.18);color:#fff}
+.bdg.plan{background:#e0e7ff;color:#3730a3}.bdg.ex{background:#fee2e2;color:#991b1b}.bdg.real{background:#dcfce7;color:#166534}
+.radarlink{display:block;margin-top:12px;background:#fff;color:#065f46;text-decoration:none;font-weight:800;border-radius:12px;padding:8px 12px;line-height:1.35}
+.radarlink span{display:block;font-weight:600;color:#0f766e;font-size:12.5px}
+.nav{display:flex;gap:6px;overflow-x:auto;margin-top:10px;padding-bottom:4px;scrollbar-width:none}
+.nav a{white-space:nowrap;color:#fff;text-decoration:none;font-size:12.5px;background:rgba(255,255,255,.12);padding:4px 10px;border-radius:99px}
+.nav a:hover{background:rgba(255,255,255,.28)}
+.legend{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;font-size:11.5px}
+.lg-flag{padding:2px 8px;border-radius:99px;background:#fff7ed;color:var(--warn);font-weight:600}
+.lg-flag.jay{background:#fef9c3;color:#854d0e}
+section{padding:26px 0 6px;scroll-margin-top:150px}
+h2{font-size:21px;margin:0 0 10px}h2 .th{font-size:.72em;margin-left:4px}
+h3{font-size:14px;margin:0 0 8px}
+.note{font-size:12.5px;color:var(--mut);margin:4px 0 10px}
+.cnt{font-size:13px;color:var(--mut);font-weight:500}
+/* platform pills */
+.pl{display:inline-block;font-size:11px;font-weight:700;color:#fff;padding:2px 8px;border-radius:99px;margin-right:3px}
+.pl.fb{background:var(--fb)}.pl.ig{background:linear-gradient(45deg,var(--ig1),var(--ig2),var(--ig3))}
+.pl.tt{background:var(--tt);box-shadow:-2px 0 0 var(--ttc),2px 0 0 var(--ttr)}
+.pil{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:99px;border:1px solid currentColor}
+.flag{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px;background:#fff7ed;color:var(--warn);border:1px solid #fed7aa}
+.flag.jay{background:#fef9c3;color:#854d0e;border-color:#fde047}
+/* easy */
+.easy{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(290px,100%),1fr));gap:14px}
+.ecard{background:var(--card);border-radius:16px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,.08);border-top:6px solid var(--brand);position:relative}
+.ecard.fb{border-top-color:var(--fb)}.ecard.ig{border-image:linear-gradient(90deg,var(--ig1),var(--ig2),var(--ig3)) 1;border-top-width:6px}.ecard.tt{border-top-color:#000}
+.ecard .num{position:absolute;right:14px;top:10px;font-size:40px;font-weight:800;color:#e5e7eb}
+.ecard .day{font-size:12px;color:var(--mut);font-weight:600}
+.ecard .hook{font-size:18px;font-weight:700;margin:6px 0 2px;line-height:1.35}
+.ecard .hook-en{font-size:13px;color:var(--mut);margin-bottom:8px}
+.ecard ol{margin:8px 0 8px 18px;padding:0;font-size:13px}
+.ecard .tm{font-size:12px;background:#f0fdfa;color:#115e59;padding:4px 8px;border-radius:8px;display:inline-block}
+/* calendar */
+.season{background:linear-gradient(90deg,#dbeafe,#e0f2fe 50%,#fef3c7);border-radius:12px;padding:8px 12px;font-size:13px;margin-bottom:10px}
+.calwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.calendar{display:grid;grid-template-columns:70px repeat(7,minmax(118px,1fr));gap:4px;min-width:900px}
+.calendar .hd{font-size:12px;font-weight:700;text-align:center;color:var(--mut);padding:4px}
+.calendar .wk{font-size:11.5px;font-weight:700;color:var(--brand);padding:6px 4px;writing-mode:horizontal-tb}
+.cell{background:#fff;border-radius:10px;min-height:118px;padding:6px;font-size:11.5px;border:1px solid var(--line);position:relative}
+.cell .dn{font-weight:800;font-size:13px}.cell .dn small{font-weight:500;color:var(--mut)}
+.cell.jay{background:linear-gradient(#fef9c3,#fffbe6)}.cell.respect{background:#f3f4f6}
+.cell.today{outline:2px solid var(--brand)}
+.ev{display:block;margin:3px 0;padding:2px 5px;border-radius:6px;font-weight:600;line-height:1.25}
+.ev.jay{background:#fde047;color:#713f12}.ev.respect{background:#d1d5db;color:#111827}.ev.day{background:#ede9fe;color:#5b21b6}
+.ev.pay{background:#dcfce7;color:#166534}.ev.sale{background:#ffe4e6;color:#9f1239}
+.ev.fest{background:#fce7f3;color:#9d174d}.ev.note{background:#e0f2fe;color:#075985}.ev.prep{background:#fef3c7;color:#92400e}
+.post{display:block;margin:3px 0;padding:3px 5px;border-radius:6px;color:#fff;text-decoration:none;line-height:1.25;font-weight:600}
+.post.fb{background:var(--fb)}.post.ig{background:linear-gradient(45deg,var(--ig1),var(--ig2),var(--ig3))}.post.tt{background:#000;border-left:3px solid var(--ttc)}
+.post .pd{font-size:10px;opacity:.9;font-weight:500}
+.nopost{color:#6b7280;font-style:italic;font-size:11px;display:block;margin-top:3px}
+.outside{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:8px;margin-top:10px}
+.outside div{background:#fff;border:1px dashed #cbd5e1;border-radius:10px;padding:8px 10px;font-size:12.5px}
+/* idea board */
+.filters{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.fg{display:flex;gap:6px;flex-wrap:wrap}
+.fb-btn{border:1px solid var(--line);background:#fff;color:var(--ink);font-weight:500;border-radius:99px;padding:5px 12px;font-size:12.5px;cursor:pointer;font-family:inherit}
+.fb-btn.on,.fb-btn.on:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:12px}
+.card{background:var(--card);border-radius:14px;padding:14px;box-shadow:0 1px 3px rgba(0,0,0,.07);display:flex;flex-direction:column;gap:6px;border-left:5px solid #ccc}
+.card .row{display:flex;flex-wrap:wrap;gap:4px;align-items:center}
+.card .dt{font-size:12px;color:var(--mut);font-weight:600;margin-left:auto}
+.card .h{font-weight:700;font-size:16px;line-height:1.35}
+.card .he{font-size:12.5px;color:var(--mut);margin-top:-4px}
+.cap{background:#f9fafb;border-radius:10px;padding:8px;font-size:13px}
+.cap .en{color:var(--mut);font-size:12.5px;margin-top:4px}
+.kv{font-size:12.5px}.kv b{color:#374151}
+.tags{font-size:12px;color:#2563eb;word-break:break-word}
+.copy{align-self:flex-start;border:1px solid var(--line);background:#fff;color:var(--ink);font-weight:500;border-radius:8px;padding:3px 10px;font-size:12px;cursor:pointer;font-family:inherit}
+.card.hl{animation:hl 1.6s}
+@keyframes hl{0%{box-shadow:0 0 0 4px #fde047}100%{box-shadow:0 1px 3px rgba(0,0,0,.07)}}
+/* panels/charts */
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:12px}
+.panel{background:#fff;border-radius:14px;padding:14px;box-shadow:0 1px 3px rgba(0,0,0,.07);position:relative;overflow:hidden}
+.chart svg{width:100%;height:auto;display:block}
+.panel.exm::after{content:"EXAMPLE · ตัวอย่าง";position:absolute;right:-34px;top:16px;transform:rotate(35deg);background:#fee2e2;color:#991b1b;font-size:10px;font-weight:800;padding:2px 40px}
+.dleg{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:12px;margin-top:6px}
+.dleg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:4px;vertical-align:-1px}
+/* trends */
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.tcard{background:#111;color:#fff;border-radius:14px;padding:12px;position:relative;overflow:hidden}
+.tcard::before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:linear-gradient(var(--ttc),var(--ttr))}
+.tcard b{font-size:15px}.tcard .th{color:#9ca3af;font-size:13px;display:block}
+.tcard p{font-size:12.5px;color:#e5e7eb;margin:6px 0 4px}
+.tcard .eff{font-size:11px;color:var(--ttc)}
+/* competitor */
+.tblwrap{overflow-x:auto;background:#fff;border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,.07)}
+table.comp{border-collapse:collapse;width:100%;min-width:1100px;font-size:12.5px}
+.comp th{background:#f3f4f6;text-align:left;padding:8px;font-size:12px;position:sticky;top:0}
+.comp th small{display:block;color:var(--mut);font-weight:500}
+.comp td{border-top:1px solid var(--line);padding:6px 8px;min-width:90px;vertical-align:top}
+.comp td[contenteditable]{background:#fffef5;cursor:text}
+.comp td[contenteditable]:empty::before{content:"fill · กรอก";color:#cbd5e1}
+.comp td.brand{font-weight:700;white-space:nowrap}.comp td.brand small{display:block;font-weight:500;color:var(--mut)}
+.btns{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+button,.btn{font-family:inherit;background:var(--brand);color:#fff;border:0;border-radius:8px;padding:7px 12px;font-size:13px;cursor:pointer;font-weight:600}
+button.ghost{background:#fff;color:var(--brand);border:1px solid var(--brand)}
+/* perf */
+.upl{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;background:#fff;border-radius:12px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.07)}
+.upl .btns{margin:0;align-items:center}
+.drop{border:2px dashed #cbd5e1;border-radius:12px;padding:10px;text-align:center;color:var(--mut);font-size:12.5px;margin:8px 0 12px}
+.drop.over{background:#ecfdf5;border-color:var(--brand)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:12px}
+.kpi{background:#fff;border-radius:12px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.07);position:relative}
+.kpi .v{font-size:24px;font-weight:800}.kpi .l{font-size:12px;color:var(--mut)}
+.kpi .x{position:absolute;right:8px;top:8px;font-size:9.5px;font-weight:800;color:#991b1b;background:#fee2e2;border-radius:4px;padding:1px 5px}
+table.top5{width:100%;border-collapse:collapse;font-size:12.5px}
+.top5 td,.top5 th{padding:5px;border-bottom:1px solid var(--line);text-align:left}.top5 td.n{text-align:right}
+/* viz */
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
+.vcard{background:#fff;border-radius:14px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.07)}
+.vcard svg{width:100%;height:90px;display:block;margin-bottom:6px;background:#f8fafc;border-radius:8px}
+.vcard b{font-size:13.5px;display:block}.vcard .th{font-size:12.5px;display:block}
+.src{font-size:13px;padding-left:18px}.src a{color:#2563eb;word-break:break-all}
+.build{font-size:11px;color:#9ca3af}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#111;color:#fff;padding:8px 14px;border-radius:10px;font-size:13px;opacity:0;transition:.3s;pointer-events:none;z-index:50;max-width:90vw}
+.toast.on{opacity:1}
+/* idea box */
+.ask{padding-top:18px}
+.ask h2{margin-bottom:8px}
+.askbox{display:flex;gap:8px;flex-wrap:wrap;background:#fff;border-radius:16px;padding:10px;box-shadow:0 2px 10px rgba(15,118,110,.15);border:2px solid #99f6e4}
+.askbox input{flex:1 1 320px;min-width:0;font:inherit;font-size:17px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;outline:none}
+.askbox input:focus{border-color:var(--brand);box-shadow:0 0 0 3px #ccfbf1}
+.askbtns{display:flex;gap:6px;flex-wrap:wrap}
+.askbtns button{padding:10px 14px;font-size:14px}
+button:disabled{opacity:.45;cursor:default}
+.exchips{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:8px 0 4px}
+.exchip{background:#f0fdfa;color:#115e59;border:1px solid #99f6e4;border-radius:99px;padding:4px 10px;font-size:12.5px;font-weight:500}
+.qstatus{font-size:14px;margin:6px 0}
+.qstatus .seem{font-size:12.5px;color:#0f766e;margin-left:6px}
+.und{margin-top:4px;font-size:12px}
+.chip{display:inline-block;background:#e0f2fe;color:#075985;border-radius:99px;padding:1px 8px;margin:2px 3px 0 0;font-weight:600}
+.chip.raw{background:#f3f4f6;color:#374151}.chip.hw{background:#fff7ed;color:var(--warn)}
+.warnbox{background:#fff7ed;border:1px solid #fed7aa;color:#7c2d12;border-radius:10px;padding:8px 10px;font-size:13px;margin:6px 0}
+.warnbox .th{color:#9a3412}.warnbox.jay{background:#fef9c3;border-color:#fde047;color:#713f12}
+.genhead{margin:10px 0 8px;font-size:15px}
+.savedbar{margin-top:10px;font-size:13px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.savedbar a{color:#0f766e}
+mark{background:#fde68a;color:inherit;border-radius:3px;padding:0 1px}
+.card.new{border-left-width:5px;background:linear-gradient(#fffbeb,#fff 90px)}
+.newtag{font-size:11.5px;font-weight:800;color:#b45309;letter-spacing:.02em}
+.newtag span{font-weight:500;color:var(--mut)}
+.copy.save{background:var(--brand);color:#fff;border-color:var(--brand)}
+.copy.saved{background:#dcfce7;color:#166534;border-color:#86efac}
+.copy.del{color:#b91c1c;border-color:#fecaca}
+.flag.resp{background:#f3f4f6;color:#374151;border-color:#d1d5db}
+.post.match,.tcard.match,.ecard.match{outline:3px solid #facc15;outline-offset:1px}
+.post.dim,.tcard.dim,.ecard.dim{opacity:.28}
+@media (max-width:640px){.askbtns{width:100%}.askbtns button{flex:1 1 auto}.askbox input{flex-basis:100%;font-size:16px}
+h1{font-size:20px}.top{position:static}section{scroll-margin-top:10px}.two{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
+@media print{.top{position:static}.nav,.btns,.drop,.upl .btns{display:none}}
+
+.panel.exm h3{padding-right:70px}
+.panel.wide{grid-column:1/-1}
+
+.lgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:12px}
+.lcard{background:var(--card);border:1px solid var(--line);border-left:4px solid #f59e0b;border-radius:12px;padding:12px 14px;font-size:13.5px}
+.lcard>b{display:block;font-size:15px}.lcard .th{display:block;color:var(--mut);margin:2px 0 6px}
+.lcard p{margin:6px 0}.lcard .lsrc{margin-top:8px;font-size:12px;border-top:1px dashed var(--line);padding-top:6px}
+.lcard .lsrc a{color:var(--brand);word-break:break-word}.lcard .lideas{margin-top:6px;font-size:12.5px}
+.lcard.match{outline:2px solid #f59e0b}.lcard.dim{opacity:.4}
+.pil.trend{color:#b45309;background:#fef3c7}
+
+.thgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
+.thcard{background:var(--card);border:1px solid var(--line);border-top:4px solid #0f766e;border-radius:12px;padding:10px 12px;font-size:13px;position:relative}
+.thcard.lead{border-top-color:#ca8a04;background:#fffbeb}.thcard>b{display:block;font-size:15px}.thcard .en{display:block;color:var(--mut);margin-bottom:4px}
+.thcard p{margin:5px 0}.thcard .risk{color:var(--warn);font-size:12.5px}.thcard a{color:var(--brand);font-weight:700}
+.leadtag{font-size:11px;font-weight:700;color:#92400e;background:#fde68a;border-radius:6px;padding:1px 6px;display:inline-block;margin-bottom:4px}
+.thcard.match{outline:2px solid #0f766e}.thcard.dim{opacity:.4}
+@media(max-width:600px){.thgrid{grid-template-columns:1fr}}
+html,body{max-width:100%;overflow-x:hidden}
+.calwrap,.tblwrap{max-width:100%}
+.card,.ecard,.lcard,.thcard,.cap,.hook,.kv,.note,h1,h2{overflow-wrap:break-word}
+.evtag{display:inline-block;font-size:11px;font-weight:800;padding:2px 8px;border-radius:99px;margin:0 0 6px}
+.evtag.verified{background:#dcfce7;color:#166534}
+.evtag.observed{background:#e0e7ff;color:#3730a3}
+.evtag.editorial{background:#f3f4f6;color:#374151}
+.notchase{background:#fff7ed;border:1px solid #fed7aa;border-radius:12px;padding:10px 12px;margin-top:8px;font-size:13px}
+.notchase a{color:var(--brand);word-break:break-word}
+details.arch>summary{cursor:pointer;font-weight:700;color:var(--brand);margin:6px 0 10px}
+
+.skip{position:absolute;left:-999px;top:0;background:#fff;color:#065f46;padding:8px 12px;z-index:30}
+.skip:focus{left:8px}
+.crumb{margin:0 0 6px}
+.crumb a{color:#fff;font-weight:800;text-decoration:none;background:rgba(255,255,255,.16);padding:4px 10px;border-radius:99px}
+.crumb a:hover{background:#fff;color:#065f46}
+.langbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.langbar button{background:rgba(255,255,255,.16);color:#fff;border:0;border-radius:99px;padding:4px 12px;font-weight:800}
+.langbar button[aria-pressed="true"]{background:#fff;color:#065f46}
+.langnote{font-size:12px;color:#d1fae5}
+.gap{background:#fff7ed;border:1px solid #fed7aa;border-radius:16px;padding:12px 14px;margin-top:16px}
+.gap h2{font-size:18px}
+.themes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:10px}
+.theme{display:flex;flex-direction:column;gap:4px;background:#fff;border:1px solid var(--line);border-top:4px solid #0f766e;border-radius:14px;padding:12px;text-decoration:none;color:inherit;min-width:0}
+.theme b{font-size:15px}
+.theme p{margin:0;font-size:13px}
+.theme .ids{font-size:11.5px;color:#0f766e;font-weight:700}
+.legend{background:#fff;border-radius:16px;padding:12px 14px;margin-top:8px}
+.legend ul{margin:8px 0;padding-left:18px}
+.legend li{margin:6px 0}
+.filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(180px,100%),1fr));gap:8px;background:#fff;border-radius:16px;padding:10px;margin-bottom:12px}
+.filters label{display:flex;flex-direction:column;gap:4px;font-size:12px;font-weight:700;color:#374151;min-width:0}
+.filters input,.filters select, .addrow input, .geoline select{font:inherit;font-weight:500;padding:8px;border:1px solid var(--line);border-radius:10px;width:100%;min-width:0}
+#bizReset{align-self:end}
+.blist{display:flex;flex-direction:column;gap:10px}
+.bcard{background:#fff;border:1px solid var(--line);border-top:5px solid #0f766e;border-radius:16px;padding:12px 14px;scroll-margin-top:120px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.bb{font-size:11px;font-weight:800;padding:2px 8px;border-radius:99px;background:#f3f4f6;color:#374151}
+.bb.cat{background:#ccfbf1;color:#115e59}
+.bb.fr-recent{background:#dcfce7;color:#166534}
+.bb.fr-trailing{background:#e0e7ff;color:#3730a3}
+.bb.fr-older{background:#f3f4f6;color:#4b5563}
+.bb.ev-official{background:#dbeafe;color:#1e3a8a}
+.bb.ev-company{background:#fce7f3;color:#9d174d}
+.bb.ev-trade{background:#ffedd5;color:#9a3412}
+.toggle{display:block;width:100%;text-align:left;background:transparent;color:inherit;border:0;padding:6px 0;font-weight:500;border-radius:10px}
+.toggle:focus{outline:3px solid #99f6e4}
+.titles{display:flex;flex-direction:column;gap:2px}
+.thline{font-size:17px;font-weight:800;line-height:1.35}
+.enline{color:var(--mut);font-weight:600;font-size:13.5px}
+body.lang-en .titles{display:flex}
+body.lang-en .enline{order:-1;color:var(--ink);font-size:17px;font-weight:800}
+body.lang-en .thline{order:0;color:var(--mut);font-size:13.5px;font-weight:600}
+body.lang-en .theme .enline{order:-1;color:var(--ink);font-weight:800}
+.teaser{margin:0;font-size:14px}
+.panel{margin-top:8px}
+.fact,.opinion,.uncert{border-radius:12px;padding:10px 12px;margin-top:8px}
+.fact{background:#f0fdfa;border:1px solid #99f6e4}
+.opinion{background:#fffbeb;border:1px solid #fde68a}
+.uncert{background:#f9fafb;border:1px solid var(--line)}
+.kicker{margin:0 0 6px;font-size:12px;font-weight:800;letter-spacing:.01em}
+.fact .kicker{color:#115e59}
+.opinion .kicker{color:#92400e}
+.drow{margin:4px 0;font-size:13.5px}
+.legal{background:#fff7ed;border:1px solid #fed7aa;border-radius:10px;padding:8px;color:#9a3412;font-size:13px}
+.jump a{color:#0f766e;font-weight:800}
+.empty{background:#fff;border-radius:12px;padding:12px}
+.noseries{background:#fff;border:2px dashed #99f6e4;border-radius:16px;padding:12px 14px}
+.baskets,.picked,.trendbtns,.addrow{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.basket,.term{background:#fff;color:#115e59;border:1px solid #99f6e4}
+.basket.on{background:#0f766e;color:#fff;border-color:#0f766e}
+.trends{display:inline-block;background:#0f766e;color:#fff;text-decoration:none;font-weight:800;border-radius:10px;padding:8px 12px}
+.trends.ghost{background:#fff;color:#0f766e;border:1px solid #0f766e}
+.geoline{display:flex;flex-direction:column;gap:4px;font-size:12.5px;font-weight:700;max-width:420px}
+.time{padding-left:18px}
+.time li{margin:6px 0}
+.tablewrap{overflow-x:auto;background:#fff;border-radius:12px;max-width:100%}
+table.sources{border-collapse:collapse;width:100%;min-width:720px;font-size:12.5px}
+table.sources th,table.sources td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+table.sources a{color:#0f766e;font-weight:700}
+.method{padding-left:18px}
+.method li{margin:6px 0}
+.bcard,.fact,.opinion,.theme,.noseries,p,h1,h2,a{overflow-wrap:break-word}
+@media(max-width:640px){
+  .top{position:static}
+  h1{font-size:22px}
+  .thline,body.lang-en .enline{font-size:16px}
+  section{scroll-margin-top:12px}
+  .bcard{scroll-margin-top:12px}
+}
+
+</style>
+</head>
+<body class="lang-th">
+<a class="skip" href="#signals">ข้ามไปที่สัญญาณ · Skip to watchpoints</a>
+<header class="top">
+  <div class="wrap">
+    <div class="ttl">
+      <div>
+        <p class="crumb"><a id="homeLink" href="dashboard-offline.html">← ไอเดียโซเชียล · Social Ideas</a></p>
+        <h1>เรดาร์ธุรกิจมาลี <span class="th">Malee Business Trends Radar</span></h1>
+        <p class="sub">อาหาร เครื่องดื่ม มะพร้าว และห่วงโซ่ธุรกิจ · F&amp;B, coconut and the business value chain<br>
+        <span class="th">ตรวจแหล่งข้อมูล 8 พ.ย. 2569 ICT · Sources checked 8 Nov 2026 ICT — research snapshot, not a live feed</span></p>
+      </div>
+      <div class="badges">
+        <span class="bdg mock">ไม่ใช่ฟีดสด · Not a live feed</span>
+        <span class="bdg own">ไม่มีคะแนน · No score</span>
+      </div>
+    </div>
+    <div class="langbar" role="group" aria-label="Language">
+      <button type="button" id="bizLangTh" aria-pressed="true">ไทย</button>
+      <button type="button" id="bizLangEn" aria-pressed="false">EN</button>
+      <span class="langnote">ทั้งสองภาษาอยู่บนหน้า ปุ่มนี้แค่สลับว่าบรรทัดไหนนำ · Both languages stay on the page. This only changes which line leads.</span>
+    </div>
+    <nav class="nav" aria-label="On this page">
+      <a href="#themes">ธีม · Themes</a>
+      <a href="#signals">สัญญาณ · Watchpoints</a>
+      <a href="#words">คำค้น · Keywords</a>
+      <a href="#time">เส้นเวลา · Timeline</a>
+      <a href="#sources">แหล่ง · Sources</a>
+      <a href="#method">วิธีทำ · Method</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<section class="gap" id="gaps">
+  <h2>อะไรที่หน้านี้ไม่มี · What this page does not have</h2>
+</section>
+
+<section id="themes">
+  <h2>ลำดับที่ควรอ่านก่อน <span class="th">Reading order, not a rank and not a score</span></h2>
+  <p class="note">ห้าข้อนี้เป็นมุมมองผู้วิเคราะห์ว่าควรเปิดบัตรไหนก่อน ไม่ได้วัดว่าตลาดขึ้นหรือลง · Five analyst prompts for which cards to open first. They do not say the market rose or fell.</p>
+  <div id="bizThemes" class="themes"></div>
+</section>
+
+<section class="legend" id="legend" aria-label="Current versus context">
+  <h2>อะไรเป็นของช่วงนี้ และอะไรเป็นบริบทเก่า · Current versus context</h2>
+  <ul>
+    <li><b>ช่วงนี้ · Current window.</b> เผยแพร่หรือมีผลตั้งแต่ 9 ต.ค. 2569 หรือเป็นแคมเปญที่ยังเปิดอยู่ในสัปดาห์ที่ตรวจ (8 พ.ย.) · Published or effective on or after 9 Oct 2026, or a campaign window that includes the 8 Nov check.</li>
+    <li><b>บริบทปี 2569 · Trailing 2026.</b> เอกสารปีนี้ที่เก่ากว่า 30 วัน รวมรายงานครึ่งปีแรกและกฎเดือนกันยายน · 2026 documents older than 30 days, including the H1 company note and the September rule.</li>
+    <li><b>บริบทเก่ากว่า · Older context.</b> มีนาคมและมิถุนายน ใช้ประกอบ ไม่ใช่ภาพเดือนพฤศจิกายน · March and June material. Context, not a November picture.</li>
+  </ul>
+  <p class="note">วันที่มีผลของกฎหมายใช้กรองได้เมื่อติดป้ายว่าเป็นวันมีผล วันที่ตรวจแหล่ง (8 พ.ย.) ไม่ถูกใช้แทนวันเผยแพร่ · A legal effective date can be used as a date only when it is labelled as one. The 8 Nov check date is never shown as a publication date.</p>
+</section>
+
+<section id="signals">
+  <h2>15 สัญญาณจาก 10 แหล่ง <span class="th">15 watchpoints, 10 sources</span> <span class="cnt" id="bizCount"></span></h2>
+  <p class="note">การ์ดที่อ้างข่าวมาลีฉบับเดียวกัน หรือข่าว FAO ฉบับเดียวกัน ไม่ได้นับเป็นหลักฐานคนละชิ้น · Cards that cite the same Malee release or the same FAO release are not extra corroboration.</p>
+  <form class="filters" id="bizForm" action="#" onsubmit="return false">
+    <label>ค้นหา · Search<input id="bizQ" type="search" enterkeyhint="search" autocomplete="off" placeholder="มะพร้าว, coconut, นม, dairy, CMG, ฉลาก"></label>
+    <label>หมวด · Category<select id="bizCat"></select></label>
+    <label>พื้นที่ · Geography<select id="bizGeo"></select></label>
+    <label>หลักฐาน · Evidence<select id="bizEv"></select></label>
+    <label>ความใหม่ · Freshness<select id="bizFresh"></select></label>
+    <button type="button" id="bizReset" class="ghost">ล้างตัวกรอง · Reset</button>
+  </form>
+  <div id="bizList" class="blist"></div>
+</section>
+
+<section id="words">
+  <h2>คำค้นที่เสนอไว้ <span class="th">Keyword explorer, links only</span></h2>
+  <div class="noseries" role="note">
+    <b>ไม่มีชุดตัวเลขที่ดึงมาได้ · No numerical series retrieved</b>
+    <p>ช่องนี้ว่างเพราะไม่ได้เก็บข้อมูล Google Trends ไว้ ไม่ใช่เพราะความสนใจเท่ากับศูนย์ ปุ่มด้านล่างเปิดเว็บ Google Trends ซึ่งต้องใช้อินเทอร์เน็ต ปลายทางอาจมีกราฟหรืออาจไม่มีข้อมูล</p>
+    <p class="enline">This panel is empty because no Google Trends series was saved. It is not a reading of zero. The button opens Google Trends, which needs the internet. That site may show a chart, or it may show nothing. A comma compares separate queries. It does not merge Thai and English as one synonym. Relative interest is not demand, sales, market share, or a health claim. Broad “มาลี” can mean something unrelated. OEM queries can be rarely searched.</p>
+  </div>
+  <div id="bizBaskets" class="baskets" role="group" aria-label="Keyword baskets"></div>
+  <p class="note" id="bizBasketNote"></p>
+  <div id="bizPicked" class="picked" aria-live="polite"></div>
+  <p class="termcount">คำที่ส่งไปเปรียบเทียบ · Terms in the link: <b id="bizTermCount"></b> สูงสุด 5 · max 5</p>
+  <div class="addrow">
+    <label>เพิ่มคำเอง · Add a term<input id="bizTerm" type="text" maxlength="80" autocomplete="off"></label>
+    <button type="button" id="bizAdd">เพิ่ม · Add</button>
+  </div>
+  <p class="note" id="bizTermMsg" role="status"></p>
+  <p id="bizBrandWarn" class="legal" hidden>คำว่า “มาลี” กว้างและอาจไม่เกี่ยวกับบริษัท · The word “มาลี” is broad and may be unrelated to the company. This basket is a proposed comparison, not a measured ranking.</p>
+  <label class="geoline">พื้นที่ของลิงก์เท่านั้น ไม่ได้กรองการ์ด · Link geography only, it does not filter the cards
+    <select id="bizLinkGeo">
+      <option value="TH" selected>ประเทศไทย · Thailand (TH)</option>
+      <option value="">ทั่วโลก · Worldwide (no geo)</option>
+    </select>
+  </label>
+  <p class="trendbtns">
+    <a id="bizTrends" class="trends" href="#">เปิดใน Google Trends / Open in Google Trends</a>
+    <a id="bizTrends5" class="trends ghost" href="#">เปิด 5 ปีใน Google Trends / Open 5 years in Google Trends</a>
+  </p>
+  <p class="note">ต้องใช้อินเทอร์เน็ต · Needs the internet. 12 เดือนเป็นค่าเริ่มต้น · 12 months is the default. ลิงก์ไม่ได้แปลว่าคำเหล่านี้กำลังถูกค้นเพิ่มขึ้น · The link does not mean these words are rising related searches.</p>
+</section>
+
+<section id="time">
+  <h2>อะไรเปลี่ยนตามวันที่ของแหล่ง <span class="th">Dated events, not a demand chart</span></h2>
+  <p class="note">เส้นนี้คือวันเผยแพร่ วันมีผล หรือวันเริ่มแคมเปญ ไม่ใช่ยอดขาย · These are publication dates, effective dates, or a campaign start. Not sales.</p>
+  <ol id="bizTime" class="time"></ol>
+</section>
+
+<section id="sources">
+  <h2>ทะเบียนแหล่ง <span class="th">Source register</span></h2>
+  <div class="tablewrap">
+    <table class="sources">
+      <thead><tr>
+        <th>รหัส</th><th>แหล่ง</th><th>ประเภท</th><th>วันเผยแพร่</th><th>ช่วงที่ครอบคลุม</th><th>วันที่ตรวจ</th><th>ลิงก์</th><th>การ์ด</th>
+      </tr></thead>
+      <tbody id="bizSources"></tbody>
+    </table>
+  </div>
+  <p class="note">คอลัมน์การ์ดบอกว่ามีกี่สัญญาณใช้แหล่งนั้น ตัวเลขมากกว่า 1 ไม่ได้แปลว่ามีคนยืนยันเพิ่ม · The card column is how many watchpoints share that source. More than one is not extra confirmation.</p>
+</section>
+
+<section id="method">
+  <h2>วิธีทำและข้อจำกัด <span class="th">Method and limits</span></h2>
+  <ul class="method">
+    <li>สแนปช็อตที่ตรวจวันที่ 8 พ.ย. 2569 ICT ไม่มีการดึงข้อมูลอัตโนมัติบน GitHub Pages · Snapshot checked 8 Nov 2026 ICT. No automatic refresh runs on this site.</li>
+    <li>ถ้าจะให้มีรอบตรวจใหม่ นั่นเป็นข้อเสนอ ไม่ใช่งานที่ตั้งไว้แล้ว · A future check is a proposal, not a job that is already running.</li>
+    <li>ประกาศ อย. ตรวจจากทะเบียน ยังไม่อ่านตัวบท และหน้านี้ไม่บอกขั้นตอนปฏิบัติตามกฎหมาย · FDA items are index checks. The full text was not reviewed, and nothing here is a compliance instruction.</li>
+    <li>ดัชนี FAO เป็นราคาสินค้าโภคภัณฑ์ระหว่างประเทศ ไม่ใช่ราคาที่มาลีซื้อ และไม่ใช่ราคาปลีกไทย · FAO indexes are international commodity indexes, not Malee's buying price and not Thai retail prices.</li>
+    <li>ถ้อยคำของมาลีเป็นคำกล่าวบริษัทเรื่องครึ่งปีแรกถึงมิถุนายน ไม่ใช่การเติบโตเดือนพฤศจิกายน · Malee lines are company self-reports about H1 through June, not November growth.</li>
+    <li>มุมมองกรมการค้าภายในเป็นประมาณการเดือนสิงหาคม ไม่ใช่ราคาหน้าฟาร์มวันนี้ · The DIT note is an August outlook, not today's farm-gate price.</li>
+    <li>ไม่มีตารางภาษีน้ำตาลในหน้ารอบนี้ · No sugar-tax rate table is published in this release.</li>
+    <li>หน้านี้ไม่ได้โพสต์โซเชียล และไม่ได้เก็บข้อมูลลูกค้า · This page does not post, and it does not collect customer data.</li>
+  </ul>
+</section>
+</main>
+<script>
+window.BIZ_RAW = {
+  "title_th": "เรดาร์ธุรกิจอาหาร เครื่องดื่ม และมะพร้าว",
+  "title_en": "Malee Business Trends Radar",
+  "checked_ict": "2026-11-08",
+  "scope": "Thailand-first, global context; public-source research snapshot, not live feed",
+  "sources": {
+    "dit": {
+      "title": "DIT: The Harmony Model for aromatic coconut community packhouses",
+      "published": "2026-08-28",
+      "url": "https://www.dit.go.th/th/news/press-releases/2569/ข-าวเลขท-2122569-กรมการค-าภายในสานต-อนโยบาย-ศ-ภจ-ใช-the-harmony-model-ยกระด-บล-งช-มชนมะพร-าวน-ำหอม-เช-อมผลผล-ต-แปรร-ป-ขยายตลาด-28-ส-งหาคม-2569/",
+      "type": "official government release"
+    },
+    "nation": {
+      "title": "DBD finds 15 fruit-packing firms suspected of using Thai nominee shareholders",
+      "published": "2026-03-06",
+      "url": "https://www.nationthailand.com/business/economy/40063420",
+      "type": "credible reporting of DBD; older context"
+    },
+    "malee": {
+      "title": "Malee H1 2026 business update / New S-Curve",
+      "published": "2026-08-17",
+      "period": "January–June 2026",
+      "url": "https://www.maleegroup.com/corporate_news/malee-new-s-curve-h1-2026-revenue-growth/",
+      "type": "company self-report"
+    },
+    "fda": {
+      "title": "Thai FDA Food Division: Ministry of Public Health notifications register",
+      "published": null,
+      "url": "https://food.fda.moph.go.th/food-law/category/announcement-of-the-ministry-of-public-health-1",
+      "type": "official legal index; effective dates verified, full legal texts not reviewed"
+    },
+    "fao": {
+      "title": "FAO Food Price Index edges down in October amid subdued demand",
+      "published": "2026-11-06",
+      "period": "October 2026",
+      "url": "https://www.fao.org/newsroom/detail/fao-food-price-index-edges-down-in-october-amid-subdued-demand/en",
+      "type": "official international monthly release"
+    },
+    "sappe": {
+      "title": "SAPPE showcases product innovations at SIAL Paris 2026",
+      "published": "2026-10-20",
+      "date_note": "Date verified in official news index; article dates exhibition 17–21 October",
+      "url": "https://www.sappe.com/en/sappe-showcases-product-innovations-at-sial-paris-2026-mogu-mogu-leads-a-diverse-new-product-lineup-on-the-global-stage/",
+      "type": "competitor self-report",
+      "date_source": "https://www.sappe.com/en/news-en/"
+    },
+    "pet": {
+      "title": "Thai Coconut grows global market presence with Sidel aseptic PET line",
+      "published": "2026-06-08",
+      "url": "https://www.petnology.com/online/news-detail/thai-coconut-grows-its-global-market-presence-with-an-aseptic-pet-line-from-sidel",
+      "type": "trade publication carrying supplier/customer statements"
+    },
+    "orange": {
+      "title": "Orange juice demand set to fall despite lower prices — Rabobank",
+      "published": "2026-06-04",
+      "period": "2026/27 forecast, not realised November outcome",
+      "url": "https://www.fruitnet.com/fruitnet/orange-juice-demand-set-to-fall-despite-lower-prices/271705.article",
+      "type": "trade reporting of Rabobank forecast"
+    },
+    "krungsri": {
+      "title": "Industry Outlook 2026–2028: Beverage Industry",
+      "published": "2026-06-15",
+      "period": "Q1 2026 observations / 2026–28 forecasts",
+      "url": "https://www.krungsri.com/en/research/industry/industry-outlook/food-beverage/beverage/io/beverage-2026",
+      "type": "bank industry research; forecasts distinguished from facts"
+    },
+    "ktc": {
+      "title": "Official Double Day 11.11 campaign",
+      "published": null,
+      "period": "7–13 November 2026 umbrella campaign; platform windows differ",
+      "url": "https://www.ktc.co.th/en/promotion/online-shopping-services/online-shopping/double-day",
+      "type": "official current card/retailer promotion, not Malee promotion"
+    }
+  },
+  "signals": [
+    {
+      "id": "coconut-harvest",
+      "category": "coconut",
+      "title_th": "มะพร้าวน้ำหอม: ยังอยู่ในช่วงผลผลิตมากตามแผนกรมการค้าภายใน",
+      "title_en": "Aromatic coconut: seasonal supply window",
+      "summary_th": "กรมการค้าภายในระบุเมื่อสิงหาคมว่าผลผลิตจะออกมากช่วงสิงหาคม–พฤศจิกายน และคาดว่าความต้องการจากจีนปลายปีอาจชะลอ จึงส่งเสริมการคัดแยก แปรรูป และเชื่อมตลาดผ่านล้งชุมชน",
+      "summary_en": "DIT’s August outlook flags high supply in August–November and possible softer late-year Chinese import demand; it promotes community sorting, processing and market access.",
+      "source_ids": [
+        "dit"
+      ],
+      "scope": "Thailand / China",
+      "freshness": "Trailing Aug outlook covering current Nov window",
+      "relevance_th": "เกี่ยวข้องกับการจัดหาน้ำมะพร้าว คุณภาพวัตถุดิบ และความเสี่ยงพึ่งตลาดเดียว",
+      "action_th": "ทีมจัดซื้อทบทวนสัญญา คุณภาพ และแหล่งที่มา; คอนเทนต์อธิบายการคัดคุณภาพได้หากมีหลักฐานจริง",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "เป็นประมาณการเดือนสิงหาคม ไม่ใช่ราคา/ผลผลิตสดวันนี้; มะพร้าวน้ำหอมสดไม่เท่ากับวัตถุดิบน้ำมะพร้าวทุกชนิด",
+      "evidence_confidence": "Supported with stated limitations",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    },
+    {
+      "id": "coconut-authenticity",
+      "category": "coconut",
+      "title_th": "ที่มาและความแท้ของน้ำมะพร้าวเป็นประเด็นที่ต้องตรวจ",
+      "title_en": "Coconut authenticity and supplier due diligence",
+      "summary_th": "รายงานเดือนมีนาคมอ้าง DBD ว่าพบปัญหาการปลอมปนและการแสดงฉลากน้ำมะพร้าวน้ำหอม รวมถึงข้อสงสัยโครงสร้างผู้ถือหุ้นล้งบางราย",
+      "summary_en": "March reporting of DBD concerns identifies adulteration/labelling risks and suspected nominee structures at some packhouses.",
+      "source_ids": [
+        "nation"
+      ],
+      "scope": "Thailand",
+      "freshness": "Older March context, not new November enforcement",
+      "relevance_th": "เชื่อมกับการรับรองวัตถุดิบและความน่าเชื่อถือทั้งแบรนด์และ OEM",
+      "action_th": "ตรวจสอบย้อนกลับและเอกสารซัพพลายเออร์; ทำ label-literacy โดยไม่กล่าวหาผู้อื่น",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "ข้อสงสัยไม่ใช่คำพิพากษา; ห้ามพาดพิงว่ามาลีหรือคู่แข่งรายใดเกี่ยวข้อง; ไม่มีราคาปัจจุบันที่ตรวจสอบได้",
+      "evidence_confidence": "Supported with stated limitations",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    },
+    {
+      "id": "coco-matcha",
+      "category": "products",
+      "title_th": "น้ำมะพร้าวจับคู่มัทฉะ: ตัวอย่างนวัตกรรมที่มาลีรายงานแล้ว",
+      "title_en": "Coconut + matcha is a documented Malee innovation",
+      "summary_th": "มาลีรายงานครึ่งปีแรกว่า Malee COCO Matcha เริ่มวางขายในโมเดิร์นเทรดและช่วยหนุนธุรกิจน้ำมะพร้าวของแบรนด์",
+      "summary_en": "Malee’s H1 release says COCO Matcha entered modern trade and supported its branded coconut-water business.",
+      "source_ids": [
+        "malee"
+      ],
+      "scope": "Thailand",
+      "freshness": "Trailing H1 results, August publication",
+      "relevance_th": "เห็นทิศทางรสชาติที่เชื่อมเครื่องดื่มมะพร้าวกับโอกาสในกลุ่มชา",
+      "action_th": "ทดสอบคำถามเรื่องรสชาติและวิธีเสิร์ฟ หลังยืนยัน SKU/ช่องทางปัจจุบัน",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "คำกล่าวบริษัทไม่ใช่หลักฐานว่ามัทฉะกำลังไวรัลเดือนพฤศจิกายน; อย่าอ้างผลต่อสุขภาพหรือยอดขายปัจจุบัน",
+      "evidence_confidence": "Supported with stated limitations",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    },
+    {
+      "id": "cmg-dairy-coffee",
+      "category": "oem",
+      "title_th": "CMG นมและกาแฟกระป๋องยังเป็นฐานธุรกิจสำคัญ",
+      "title_en": "Dairy and canned coffee matter for CMG",
+      "summary_th": "มาลีระบุว่าธุรกิจรับจ้างผลิตครึ่งปีแรกได้แรงหนุนจากนมและกาแฟกระป๋อง พร้อมวางแผนพัฒนาผลิตภัณฑ์จากพืช",
+      "summary_en": "Malee reports H1 CMG support from dairy and canned coffee, alongside plans for plant-based product development.",
+      "source_ids": [
+        "malee"
+      ],
+      "scope": "Thailand / international customers",
+      "freshness": "Trailing H1 company report",
+      "relevance_th": "หน้าแนวโน้มควรครอบคลุม OEM/CMG ไม่ใช่น้ำผลไม้กับน้ำมะพร้าวเท่านั้น",
+      "action_th": "จัดทำ capability story แบบไม่เปิดชื่อลูกค้า สูตร หรือกำลังการผลิตที่ไม่เป็นสาธารณะ",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "แผน plant-based ไม่ใช่คำสั่งซื้อที่ได้รับแล้ว; นมและ plant-based ไม่ใช่ผลิตภัณฑ์ที่เทียบโภชนาการแทนกันได้อัตโนมัติ",
+      "evidence_confidence": "Supported with stated limitations",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    },
+    {
+      "id": "export-diversification",
+      "category": "trade",
+      "title_th": "กระจายตลาด: มะพร้าวกับนมกัมพูชามีโจทย์ต่างกัน",
+      "title_en": "Export mix: coconut opportunity versus Cambodia exposure",
+      "summary_th": "มาลีรายงานผลกระทบชายแดนต่อสินค้านมและผลไม้กระป๋องในครึ่งปีแรก ขณะระบุการเติบโตของน้ำมะพร้าวในจีนและเกาหลีใต้และแผนกระจายตลาด",
+      "summary_en": "Malee’s H1 update describes border-related weakness in dairy/canned fruit, coconut-water growth in China and South Korea, and diversification plans.",
+      "source_ids": [
+        "malee"
+      ],
+      "scope": "Thailand / Cambodia / China / South Korea",
+      "freshness": "Trailing H1 report; current border status not verified",
+      "relevance_th": "เกี่ยวกับ mix รายได้ ความเสี่ยงลูกค้า และลำดับความสำคัญตลาดส่งออก",
+      "action_th": "แยก watchlist ตามประเทศและหมวดสินค้า; ทีมส่งออกยืนยันสถานะด่านและลูกค้าก่อนใช้วางแผน",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "อย่าอ้างว่าด่านยังปิดวันนี้หรือยอดส่งออกเดือนล่าสุดเติบโต; ไม่ใช้ภาพหรือชื่อพรีเซ็นเตอร์โดยไม่มีสิทธิ",
+      "evidence_confidence": "Supported with stated limitations",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    },
+    {
+      "id": "upcycling",
+      "category": "innovation",
+      "title_th": "เพิ่มมูลค่าวัสดุเกษตรเหลือใช้: โอกาสฝั่ง B2B",
+      "title_en": "Agricultural by-products as a B2B innovation route",
+      "summary_th": "มาลีระบุว่า MAS ใช้แนวทาง upcycling พัฒนาสารออกฤทธิ์มูลค่าสูงและขยายฐานลูกค้า B2B",
+      "summary_en": "Malee reports MAS development of higher-value active ingredients from agricultural by-products and B2B customer expansion.",
+      "source_ids": [
+        "malee"
+      ],
+      "scope": "Thailand / global B2B",
+      "freshness": "Trailing August company statement",
+      "relevance_th": "เกี่ยวกับธุรกิจส่วนต่อยอดนอกเครื่องดื่มสำเร็จรูป",
+      "action_th": "อธิบายกระบวนการเพิ่มมูลค่าที่ตรวจสอบได้ แยกจากสรรพคุณสินค้าอุปโภคบริโภค",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "ไม่เท่ากับพิสูจน์ประสิทธิผลทางคลินิก; ห้ามอ้างลดคาร์บอน/zero waste หรือผลรักษาโดยไม่มีหลักฐานและ Legal",
+      "evidence_confidence": "Supported with stated limitations",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    },
+    {
+      "id": "label-update",
+      "category": "regulation",
+      "title_th": "ฉลากอาหาร: อย. แสดงกฎฉบับใหม่มีผล 31 ตุลาคม",
+      "title_en": "Food-label amendment listed effective 31 October",
+      "summary_th": "ทะเบียนกฎหมายกองอาหารระบุประกาศฉบับที่ 474 พ.ศ.2569 เรื่องการแสดงฉลากอาหารในภาชนะบรรจุ (ฉบับที่ 2) มีผล 31 ตุลาคม 2569",
+      "summary_en": "The Thai FDA legal register lists Notification 474 on packaged-food labelling as in force from 31 October 2026.",
+      "source_ids": [
+        "fda"
+      ],
+      "scope": "Thailand",
+      "freshness": "Current: effective 2026-10-31; publication date not established",
+      "relevance_th": "อาจเกี่ยวกับ artwork บรรจุภัณฑ์และข้อความในคอนเทนต์",
+      "action_th": "ส่งให้ทีม Regulatory ตรวจข้อกำหนด ข้อยกเว้น และระยะเปลี่ยนผ่านจากต้นฉบับก่อนแก้ pack",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "ตรวจเพียงทะเบียนทางการ ยังไม่ได้วิเคราะห์เนื้อกฎหมาย; ไม่อ้างว่าทุก SKU ต้องเปลี่ยนทันที",
+      "evidence_confidence": "Official index verified; legal interpretation pending",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    },
+    {
+      "id": "sealed-beverage",
+      "category": "regulation",
+      "title_th": "เครื่องดื่มปิดสนิท: ทบทวนกฎฉบับ 473",
+      "title_en": "Sealed-beverage rule needs regulatory review",
+      "summary_th": "ทะเบียน อย. ระบุประกาศฉบับที่ 473 พ.ศ.2569 เรื่องเครื่องดื่มในภาชนะบรรจุที่ปิดสนิท (ฉบับที่ 4) มีผล 17 กันยายน 2569; ยังมีฉบับ 469 เรื่องอาหารปิดสนิทมีผล 19 พฤษภาคม",
+      "summary_en": "FDA lists sealed-beverage Notification 473 effective 17 September 2026 and sealed-food Notification 469 effective 19 May.",
+      "source_ids": [
+        "fda"
+      ],
+      "scope": "Thailand",
+      "freshness": "Recent rule 2026-09-17 plus May context",
+      "relevance_th": "เกี่ยวกับน้ำผลไม้ น้ำมะพร้าว และผลิตภัณฑ์บรรจุกระป๋องในขอบเขตที่กฎหมายกำหนด",
+      "action_th": "ทำ compliance checklist แยกน้ำผลไม้/เครื่องดื่ม/ผลไม้กระป๋อง ให้ Regulatory ระบุฉบับที่ใช้จริง",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "ไม่มีข้อสรุปเนื้อหาเรื่องสัดส่วนน้ำผลไม้ วิธีตั้งชื่อ หรือ deadline จากทะเบียนเพียงอย่างเดียว",
+      "evidence_confidence": "Official index verified; full-text application pending",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    },
+    {
+      "id": "sugar-input",
+      "category": "inputs",
+      "title_th": "น้ำตาลโลกขึ้น แม้ดัชนีอาหารรวมลด",
+      "title_en": "Sugar rises even as the broad food index falls",
+      "summary_th": "FAO รายงานวันที่ 6 พฤศจิกายนว่าดัชนีน้ำตาลเดือนตุลาคมเพิ่มต่อเนื่องเป็นเดือนที่สี่ ขณะที่ดัชนีอาหารรวมลดจากกันยายน",
+      "summary_en": "FAO’s 6 November release reports a fourth monthly rise in its October sugar index despite a decline in the overall food index.",
+      "source_ids": [
+        "fao"
+      ],
+      "scope": "Global / Thai procurement relevance",
+      "freshness": "Current release 2026-11-06, October observations",
+      "relevance_th": "สินค้าแต่ละสูตรมีความเสี่ยงต้นทุนไม่เท่ากัน; ดู exposure จริงก่อนสรุป margin",
+      "action_th": "จัดซื้อทบทวนสูตร สัญญาน้ำตาล และงวดปรับราคา; คอนเทนต์ไม่จำเป็นต้องกล่าวเรื่องต้นทุน",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "ดัชนีโลกไม่ใช่ราคาน้ำตาลในสัญญามาลี; no-added-sugar ไม่เท่ากับไม่มีน้ำตาล; tax rates ต้องตรวจแยก",
+      "evidence_confidence": "Supported with stated limitations",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    },
+    {
+      "id": "dairy-divergence",
+      "category": "inputs",
+      "title_th": "ดัชนีนมลด แต่ราคานมผงไม่ได้ลดตามทั้งหมด",
+      "title_en": "Dairy headline falls, milk powder diverges",
+      "summary_th": "FAO ระบุว่าดัชนีนมเดือนตุลาคมลดเพราะเนยและชีส ขณะที่ราคานมผงยังเพิ่ม",
+      "summary_en": "FAO reports that butter and cheese drove the October dairy-index decline while milk powder quotations continued to rise.",
+      "source_ids": [
+        "fao"
+      ],
+      "scope": "Global / dairy and CMG",
+      "freshness": "Current release 2026-11-06, October observations",
+      "relevance_th": "สำคัญต่อผู้ใช้วัตถุดิบนมผงและ CMG; ดัชนีรวมอาจกลบภาระต้นทุนจริง",
+      "action_th": "แยกตารางติดตาม SMP/WMP/น้ำนมดิบตามสูตร; Procurement ยืนยันฐานราคาและค่าเงิน",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "ไม่อนุมานว่าต้นทุน UHT ไทยหรือมาลีลด; ไม่มีข้อมูลสัญญาจัดซื้อจริง",
+      "evidence_confidence": "Supported with stated limitations",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    },
+    {
+      "id": "sappe-formats",
+      "category": "competition",
+      "title_th": "คู่แข่งขยายจากเครื่องดื่มไปหลายฟอร์แมต",
+      "title_en": "Competitor moves across sugar and texture formats",
+      "summary_th": "SAPPE ระบุที่ SIAL Paris ตุลาคมว่ามี Mogu Mogu Zero Sugar, Jelly, Gummy, Candy และ Iced Tea พร้อมนำเสนอ All Coco",
+      "summary_en": "SAPPE’s October SIAL announcement describes Mogu Mogu Zero Sugar, jelly, gummy, candy and iced-tea offerings, alongside All Coco.",
+      "source_ids": [
+        "sappe"
+      ],
+      "scope": "Thailand brands / international trade",
+      "freshness": "Recent publication 2026-10-20",
+      "relevance_th": "คู่แข่งแข่งขันทั้งรสชาติ texture โอกาสบริโภค และพอร์ตส่งออก",
+      "action_th": "ทำ competitor assortment board จากข้อมูลสาธารณะ; ทดสอบ concept occasion ไม่ลอก artwork",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "งานแสดงสินค้าไม่เท่ากับจำหน่ายทั่วไทยหรือขายดี; ห้ามยกสรรพคุณคู่แข่งเป็นของมาลี",
+      "evidence_confidence": "Supported with stated limitations",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    },
+    {
+      "id": "aseptic-pet",
+      "category": "competition",
+      "title_th": "คู่แข่งมะพร้าวลงทุนฟอร์แมต PET ปลอดเชื้อ",
+      "title_en": "Aseptic PET broadens coconut packaging options",
+      "summary_th": "ข่าวการค้าเดือนมิถุนายนระบุ Thai Coconut ใช้ไลน์ PET ปลอดเชื้อของ Sidel สำหรับน้ำมะพร้าวทั้งแบบนิ่งและซ่า โดยเน้นส่งออก",
+      "summary_en": "June trade reporting describes Thai Coconut adopting Sidel aseptic PET for still and carbonated coconut drinks, with an export focus.",
+      "source_ids": [
+        "pet"
+      ],
+      "scope": "Thailand / global export",
+      "freshness": "Older June capability context",
+      "relevance_th": "สะท้อนการแข่งขันด้านบรรจุภัณฑ์และความยืดหยุ่นการผลิต/OEM",
+      "action_th": "เทียบข้อดีของ pack ตาม occasion, shelf life และ total cost โดยใช้ข้อกำหนดที่ตรวจสอบแล้ว",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "เป็นคำกล่าวผู้ขาย/ลูกค้า ไม่ใช่ผล audit อิสระ; ไม่อ้าง FDA-approved สำหรับทุก SKU; ไม่อนุมานยอดใช้กำลังผลิตปัจจุบัน",
+      "evidence_confidence": "Supported with stated limitations",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    },
+    {
+      "id": "orange-supply-demand",
+      "category": "fruit",
+      "title_th": "น้ำส้ม: อย่าดูอุปทานโดยไม่ดูราคาขายปลีกและดีมานด์",
+      "title_en": "Orange juice: supply is only half the picture",
+      "summary_th": "Fruitnet รายงานคาดการณ์ Rabobank เดือนมิถุนายนว่า 2026/27 อุปทานน้ำส้มอาจลดจากสภาพอากาศและโรค greening ขณะที่ราคาขายปลีกสูงกดความต้องการ",
+      "summary_en": "June reporting of Rabobank’s 2026/27 outlook flags lower orange-juice supply due to weather/greening alongside demand pressure from high retail prices.",
+      "source_ids": [
+        "orange"
+      ],
+      "scope": "Global / Brazil / export buyers",
+      "freshness": "Older June forecast for 2026/27, not latest harvest update",
+      "relevance_th": "เกี่ยวกับวัตถุดิบน้ำส้ม การวางราคา และ product mix น้ำผลไม้",
+      "action_th": "จัดซื้อขออัปเดต crop และ quotation; การตลาดเน้นรสชาติ occasion และคุณค่าที่พิสูจน์ได้",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "เป็น forecast ไม่ใช่ยอดจริง; ราคา futures ไม่ใช่ต้นทุนส่งถึงโรงงาน; ไม่มีข้อมูลพฤศจิกายนหรือ pineapple series ที่ยืนยัน",
+      "evidence_confidence": "Supported with stated limitations",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    },
+    {
+      "id": "demand-packaging",
+      "category": "demand",
+      "title_th": "ความสะดวกและฟังก์ชันมีโอกาส แต่กำลังซื้อกับต้นทุนยังต้องระวัง",
+      "title_en": "Convenience and function meet value and cost constraints",
+      "summary_th": "Krungsri Research เดือนมิถุนายนมองโอกาส functional และน้ำตาลลด รวมทั้งร้านสะดวกซื้อ แต่เตือนกำลังซื้อ ต้นทุนพลังงาน บรรจุภัณฑ์ และโลจิสติกส์",
+      "summary_en": "Krungsri’s June outlook identifies functional/reduced-sugar innovation and convenience retail opportunities, alongside purchasing-power, energy, packaging and logistics risks.",
+      "source_ids": [
+        "krungsri"
+      ],
+      "scope": "Thailand / ASEAN export context",
+      "freshness": "Older June research, 2026–28 outlook",
+      "relevance_th": "ช่วยตั้งสมมติฐาน pack-price และ proposition โดยไม่เหมารวมว่าพรีเมียมชนะทุกกลุ่ม",
+      "action_th": "ทดสอบ pack/price occasion แบบเล็กกับผู้บริโภคและร้านค้า; เน้นความชัดของฉลาก",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "ไม่ใช่ข้อมูลดีมานด์เดือนล่าสุด; functional/protein claim ต้องมีสูตรและ Regulatory; ไม่มี evidence ว่า plant-based โตทั้งตลาด",
+      "evidence_confidence": "Supported with stated limitations",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    },
+    {
+      "id": "1111-channel",
+      "category": "channels",
+      "title_th": "11.11 เป็นหน้าต่างค้าขายที่ยืนยันได้ ไม่ใช่หลักฐานยอดขายมาลี",
+      "title_en": "11.11 is a verified commerce window, not a Malee sales result",
+      "summary_th": "KTC ระบุโปร Double Day พฤศจิกายนกับ Shopee, Lazada และ TikTok Shop โดยช่วงเวลาแตกต่างกันตามแพลตฟอร์ม",
+      "summary_en": "KTC’s current November Double Day page lists Shopee, Lazada and TikTok Shop offers with platform-specific windows.",
+      "source_ids": [
+        "ktc"
+      ],
+      "scope": "Thailand",
+      "freshness": "Current campaign week, November 2026",
+      "relevance_th": "เกี่ยวกับหน้า official store เนื้อหาช่วยเลือก pack และการประสาน Sales",
+      "action_th": "ตรวจราคา stock เงื่อนไข และลิงก์ร้านที่ได้รับอนุมัติ; ทำ buying checklist แทนใส่ส่วนลดที่ยังไม่ยืนยัน",
+      "action_label": "มุมมองผู้วิเคราะห์ / Analyst judgment",
+      "uncertainties_flags": "ไม่ยืนยันว่ามาลีร่วมโปร; โปรบัตรไม่ใช่ส่วนลดทุกสินค้า; ไม่มียอดขาย/GMV หรือ conversion ที่ตรวจสอบได้",
+      "evidence_confidence": "Supported with stated limitations",
+      "checked": "2026-11-08",
+      "numeric_series": null
+    }
+  ],
+  "keyword_baskets": [
+    {
+      "id": "coconut",
+      "terms": [
+        "น้ำมะพร้าว",
+        "มะพร้าวน้ำหอม",
+        "coconut water",
+        "aromatic coconut"
+      ],
+      "note": "Proposed research basket, not observed related queries or search volumes",
+      "google_trends_url": "https://trends.google.com/trends/explore?date=today+12-m&geo=TH&hl=th&q=%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A1%E0%B8%B0%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7%2C%E0%B8%A1%E0%B8%B0%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%AB%E0%B8%AD%E0%B8%A1%2Ccoconut+water%2Caromatic+coconut",
+      "series": null
+    },
+    {
+      "id": "juice",
+      "terms": [
+        "น้ำผลไม้",
+        "น้ำส้ม",
+        "fruit juice",
+        "orange juice"
+      ],
+      "note": "Proposed research basket, not observed related queries or search volumes",
+      "google_trends_url": "https://trends.google.com/trends/explore?date=today+12-m&geo=TH&hl=th&q=%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%9C%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%89%2C%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%AA%E0%B9%89%E0%B8%A1%2Cfruit+juice%2Corange+juice",
+      "series": null
+    },
+    {
+      "id": "dairy-plant",
+      "terms": [
+        "นมยูเอชที",
+        "นมจากพืช",
+        "นมโอ๊ต",
+        "plant based milk"
+      ],
+      "note": "Proposed research basket, not observed related queries or search volumes",
+      "google_trends_url": "https://trends.google.com/trends/explore?date=today+12-m&geo=TH&hl=th&q=%E0%B8%99%E0%B8%A1%E0%B8%A2%E0%B8%B9%E0%B9%80%E0%B8%AD%E0%B8%8A%E0%B8%97%E0%B8%B5%2C%E0%B8%99%E0%B8%A1%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%9E%E0%B8%B7%E0%B8%8A%2C%E0%B8%99%E0%B8%A1%E0%B9%82%E0%B8%AD%E0%B9%8A%E0%B8%95%2Cplant+based+milk",
+      "series": null
+    },
+    {
+      "id": "flavours",
+      "terms": [
+        "มัทฉะ",
+        "น้ำมะพร้าวมัทฉะ",
+        "matcha",
+        "coconut matcha"
+      ],
+      "note": "Proposed research basket, not observed related queries or search volumes",
+      "google_trends_url": "https://trends.google.com/trends/explore?date=today+12-m&geo=TH&hl=th&q=%E0%B8%A1%E0%B8%B1%E0%B8%97%E0%B8%89%E0%B8%B0%2C%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A1%E0%B8%B0%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%A1%E0%B8%B1%E0%B8%97%E0%B8%89%E0%B8%B0%2Cmatcha%2Ccoconut+matcha",
+      "series": null
+    },
+    {
+      "id": "fruit",
+      "terms": [
+        "ผลไม้กระป๋อง",
+        "สับปะรดกระป๋อง",
+        "canned fruit",
+        "canned pineapple"
+      ],
+      "note": "Proposed research basket, not observed related queries or search volumes",
+      "google_trends_url": "https://trends.google.com/trends/explore?date=today+12-m&geo=TH&hl=th&q=%E0%B8%9C%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9B%E0%B9%8B%E0%B8%AD%E0%B8%87%2C%E0%B8%AA%E0%B8%B1%E0%B8%9A%E0%B8%9B%E0%B8%B0%E0%B8%A3%E0%B8%94%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9B%E0%B9%8B%E0%B8%AD%E0%B8%87%2Ccanned+fruit%2Ccanned+pineapple",
+      "series": null
+    },
+    {
+      "id": "oem",
+      "terms": [
+        "รับผลิตเครื่องดื่ม",
+        "OEM เครื่องดื่ม",
+        "beverage OEM",
+        "private label beverages"
+      ],
+      "note": "Proposed research basket, not observed related queries or search volumes",
+      "google_trends_url": "https://trends.google.com/trends/explore?date=today+12-m&geo=TH&hl=th&q=%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%9C%E0%B8%A5%E0%B8%B4%E0%B8%95%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%94%E0%B8%B7%E0%B9%88%E0%B8%A1%2COEM+%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%94%E0%B8%B7%E0%B9%88%E0%B8%A1%2Cbeverage+OEM%2Cprivate+label+beverages",
+      "series": null
+    },
+    {
+      "id": "brands",
+      "terms": [
+        "มาลี",
+        "Malee Coco",
+        "Tipco",
+        "All Coco",
+        "Mogu Mogu"
+      ],
+      "note": "Proposed research basket, not observed related queries or search volumes",
+      "google_trends_url": "https://trends.google.com/trends/explore?date=today+12-m&geo=TH&hl=th&q=%E0%B8%A1%E0%B8%B2%E0%B8%A5%E0%B8%B5%2CMalee+Coco%2CTipco%2CAll+Coco%2CMogu+Mogu",
+      "series": null
+    },
+    {
+      "id": "supply",
+      "terms": [
+        "ราคามะพร้าว",
+        "ราคาน้ำตาล",
+        "ราคานมผง",
+        "ค่าระวางเรือ"
+      ],
+      "note": "Proposed research basket, not observed related queries or search volumes",
+      "google_trends_url": "https://trends.google.com/trends/explore?date=today+12-m&geo=TH&hl=th&q=%E0%B8%A3%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B8%A1%E0%B8%B0%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7%2C%E0%B8%A3%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95%E0%B8%B2%E0%B8%A5%2C%E0%B8%A3%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B8%99%E0%B8%A1%E0%B8%9C%E0%B8%87%2C%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%A3%E0%B8%B0%E0%B8%A7%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B8%AD",
+      "series": null
+    }
+  ],
+  "google_trends_data_status": "No series retrieved; links only. No scores, volumes or charts to fabricate."
+};
+
+</script>
+<script>
+/* Display metadata for the 8 Nov 2026 business snapshot.
+   Dates are calendar dates, not viewer-local timestamps. Checked date is not a publication date.
+   Analyst lines are opinion. Nothing here is a score. */
+window.BIZ_META = {
+  checked: "2026-11-08",
+  checkedLabel: "8 Nov 2026 ICT",
+  checkedLabelTh: "8 พ.ย. 2569 ICT",
+  categories: {
+    coconut: {th: "มะพร้าว คุณภาพและที่มา", en: "Coconut supply and integrity", c: "#0f766e"},
+    consumer: {th: "ผู้บริโภค รส และฟอร์แมต", en: "Consumer, product and innovation", c: "#db2777"},
+    fruit: {th: "น้ำผลไม้ ผลไม้ นม และจากพืช", en: "Juice, fruit, dairy and plant-based", c: "#ea580c"},
+    oem: {th: "CMG, OEM และการส่งออก", en: "CMG, OEM and exports", c: "#1d4ed8"},
+    inputs: {th: "วัตถุดิบและโลจิสติกส์", en: "Inputs and logistics", c: "#b45309"},
+    retail: {th: "ร้านค้าและอีคอมเมิร์ซ", en: "Retail and ecommerce", c: "#7c3aed"},
+    regulation: {th: "กฎเกณฑ์ไทย", en: "Thai regulation", c: "#b91c1c"}
+  },
+  fresh: {
+    recent: {th: "ช่วงนี้", en: "Current window"},
+    trailing: {th: "บริบทปี 2569", en: "Trailing 2026 context"},
+    older: {th: "บริบทเก่ากว่า", en: "Older context"}
+  },
+  geo: {
+    th: {th: "ไทย", en: "Thailand"},
+    mix: {th: "ไทยและต่างประเทศ", en: "Thailand and international"},
+    global: {th: "โลก", en: "Global"}
+  },
+  evidence: {
+    official: {th: "หน่วยงานทางการ", en: "Official or international body"},
+    company: {th: "คำกล่าวบริษัท", en: "Company statement"},
+    trade: {th: "รายงานการค้า", en: "Independent or trade reporting"}
+  },
+  themes: [
+    {id: "reg", th: "ตรวจฉลากก่อนทำ artwork", en: "Regulatory first",
+      why: "The FDA register lists a packaged-food label amendment effective 31 Oct 2026 and a sealed-beverage amendment effective 17 Sep. These are watchpoints. They are not a finished legal opinion.",
+      whyTh: "ทะเบียน อย. ระบุฉลากอาหารมีผล 31 ต.ค. 2569 และเครื่องดื่มปิดสนิทมีผล 17 ก.ย. เป็นจุดที่ต้องเฝ้า ไม่ใช่ความเห็นกฎหมายที่จบแล้ว",
+      ids: ["label-update", "sealed-beverage"]},
+    {id: "cost", th: "ต้นทุนแต่ละวัตถุดิบไปคนละทาง", en: "Do not trust one cost headline",
+      why: "FAO's 6 Nov release says October sugar rose, while the dairy index fell overall and milk powder did not. A global index is not Malee's contract price.",
+      whyTh: "FAO วันที่ 6 พ.ย. บอกว่าน้ำตาลเดือนตุลาคมขึ้น ขณะที่ดัชนีนมรวมลด แต่นมผงไม่ได้ลดตาม ดัชนีโลกไม่ใช่ราคาสัญญาของมาลี",
+      ids: ["sugar-input", "dairy-divergence"]},
+    {id: "coco", th: "มะพร้าว: คุณภาพ ที่มา และหลายตลาด", en: "Coconut quality, origin and diversification",
+      why: "DIT's August outlook covers high supply through November and possible softer late-year Chinese demand. It is an outlook, not today's farm-gate price. March reporting raises supplier questions, not accusations.",
+      whyTh: "กรมการค้าภายในเดือนสิงหาคมพูดถึงผลผลิตมากถึงพฤศจิกายน และความต้องการจากจีนที่อาจชะลอ เป็นมุมมอง ไม่ใช่ราคาหน้าฟาร์มวันนี้ รายงานมีนาคมตั้งคำถามผู้ขาย ไม่ใช่ข้อกล่าวหา",
+      ids: ["coconut-harvest", "coconut-authenticity", "export-diversification"]},
+    {id: "innov", th: "นวัตกรรมดูทั้งรส ฟอร์แมต และ CMG", en: "Innovation includes formats and manufacturing",
+      why: "SAPPE's October SIAL lineup is a competitor signal. Malee's August H1 note covers coconut-matcha, dairy and canned-coffee CMG, and plant-based plans. Those are trailing statements, not November growth.",
+      whyTh: "ไลน์สินค้า SAPPE ที่ SIAL เดือนตุลาคมเป็นสัญญาณคู่แข่ง มาลีรายงานครึ่งปีแรกเรื่องมะพร้าวมัทฉะ CMG นมและกาแฟกระป๋อง และแผนจากพืช เป็นถ้อยคำย้อนหลัง ไม่ใช่การเติบโตเดือนพฤศจิกายน",
+      ids: ["sappe-formats", "coco-matcha", "cmg-dairy-coffee"]},
+    {id: "shop", th: "11.11 ใช้ช่วยเลือกสินค้า ไม่แต่งโปร", en: "Commerce with verified terms",
+      why: "A current card and retailer campaign shows this week's selling window. It does not show a Malee discount, stock level, or sales result.",
+      whyTh: "แคมเปญบัตรและร้านค้าที่ยืนยันได้แสดงหน้าต่างขายของสัปดาห์นี้ ไม่ได้แสดงส่วนลด สต็อก หรือยอดขายของมาลี",
+      ids: ["1111-channel"]}
+  ],
+  signals: {
+    "coconut-harvest": {cat: "coconut", fresh: "trailing", geo: "mix", evidence: "official", sort: 60,
+      published: "2026-08-28", effective: null,
+      observed: "August–November 2026 supply window, described in an August outlook. Not a price observed on 8 Nov.",
+      observedTh: "ช่วงผลผลิต ส.ค.–พ.ย. 2569 ตามมุมมองเดือนสิงหาคม ไม่ใช่ราคาที่สำรวจวันที่ 8 พ.ย.",
+      relevanceEn: "It bears on coconut-water sourcing, raw-material quality, and reliance on one export market.",
+      actionEn: "Procurement reviews contracts, quality and origin. Content may explain quality sorting only when the evidence is real.",
+      uncertaintyEn: "This is an August estimate, not today's price or harvest. Fresh aromatic coconut is not the same as every coconut-water ingredient.",
+      also: []},
+    "coconut-authenticity": {cat: "coconut", fresh: "older", geo: "th", evidence: "trade", sort: 90,
+      published: "2026-03-06", effective: null,
+      observed: "March 2026 reporting of DBD concerns. Not a new November enforcement action.",
+      observedTh: "รายงานมีนาคม 2569 เกี่ยวกับข้อกังวลของกรมพัฒนาธุรกิจการค้า ไม่ใช่การบังคับใช้ใหม่ในพฤศจิกายน",
+      relevanceEn: "It connects to ingredient assurance and to trust for both the brand and OEM work.",
+      actionEn: "Check traceability and supplier documents. Teach label reading without accusing any company.",
+      uncertaintyEn: "A suspicion is not a judgment. Do not imply that Malee or a named competitor is involved. No current price was verified.",
+      also: []},
+    "coco-matcha": {cat: "consumer", fresh: "trailing", geo: "th", evidence: "company", sort: 70,
+      published: "2026-08-17", effective: null,
+      observed: "January–June 2026, in a company statement published in August.",
+      observedTh: "ม.ค.–มิ.ย. 2569 จากคำกล่าวบริษัทที่เผยแพร่เดือนสิงหาคม",
+      relevanceEn: "It shows a flavour direction that links coconut drinks with tea occasions.",
+      actionEn: "Test questions about flavour and how to serve it, after the current SKU and channel are confirmed.",
+      uncertaintyEn: "A company statement is not evidence that matcha is a November viral trend. Do not claim a health effect or a current sales result.",
+      also: ["coconut"]},
+    "cmg-dairy-coffee": {cat: "oem", fresh: "trailing", geo: "mix", evidence: "company", sort: 71,
+      published: "2026-08-17", effective: null,
+      observed: "January–June 2026, in the same H1 company statement.",
+      observedTh: "ม.ค.–มิ.ย. 2569 จากคำกล่าวครึ่งปีแรกฉบับเดียวกัน",
+      relevanceEn: "A business radar should cover OEM and CMG, not only juice and coconut water.",
+      actionEn: "A capability story that does not name customers, formulas, or capacity that is not public.",
+      uncertaintyEn: "A plant-based plan is not an order already won. Milk and a plant-based drink are not automatically nutrition substitutes.",
+      also: ["fruit"]},
+    "export-diversification": {cat: "oem", fresh: "trailing", geo: "mix", evidence: "company", sort: 72,
+      published: "2026-08-17", effective: null,
+      observed: "January–June 2026 company description. The border status on 8 Nov 2026 was not re-checked.",
+      observedTh: "คำอธิบายครึ่งปีแรก ม.ค.–มิ.ย. 2569 สถานะด่าน ณ 8 พ.ย. 2569 ยังไม่ได้ตรวจซ้ำ",
+      relevanceEn: "It bears on revenue mix, customer risk, and which export markets come first.",
+      actionEn: "Keep separate watchlists by country and category. Export confirms border and customer status before this is used for a plan.",
+      uncertaintyEn: "Do not say the border is closed today, or that the latest month of exports grew. Do not use a presenter image or name without rights.",
+      also: ["coconut"]},
+    "upcycling": {cat: "oem", fresh: "trailing", geo: "mix", evidence: "company", sort: 73,
+      published: "2026-08-17", effective: null,
+      observed: "August 2026 company statement covering H1 activity.",
+      observedTh: "คำกล่าวบริษัทเดือนสิงหาคม 2569 เกี่ยวกับกิจกรรมครึ่งปีแรก",
+      relevanceEn: "It bears on the business beyond finished drinks.",
+      actionEn: "Describe a value-adding process that can be checked, separate from a consumer health claim.",
+      uncertaintyEn: "This is not clinical proof. Do not claim lower carbon, zero waste, or a treatment effect without evidence and Legal review.",
+      also: []},
+    "label-update": {cat: "regulation", fresh: "recent", geo: "th", evidence: "official", sort: 30,
+      published: null, effective: "2026-10-31",
+      observed: "Effective date of Notification 474. The publication date was not established from the index.",
+      observedTh: "วันมีผลของประกาศฉบับ 474 วันประกาศยังไม่ปรากฏจากทะเบียน",
+      relevanceEn: "It may affect pack artwork and the words used in content.",
+      actionEn: "Regulatory reads the full text, exceptions and any transition period before pack art is changed.",
+      uncertaintyEn: "Only the official index was checked. The legal text was not interpreted. Do not say every SKU must change now.",
+      also: []},
+    "sealed-beverage": {cat: "regulation", fresh: "trailing", geo: "th", evidence: "official", sort: 50,
+      published: null, effective: "2026-09-17",
+      extraDates: [{iso: "2026-05-19", kind: "effective", note: "Notification 469 effective date"}],
+      observed: "Notification 473 effective 17 Sep 2026. Notification 469 effective 19 May 2026. Publication dates were not established.",
+      observedTh: "ฉบับ 473 มีผล 17 ก.ย. 2569 และฉบับ 469 มีผล 19 พ.ค. 2569 วันประกาศยังไม่ปรากฏ",
+      relevanceEn: "It bears on juice, coconut water, and canned products where the law applies.",
+      actionEn: "Split a checklist across juice, beverages and canned fruit. Regulatory names the instrument that actually applies.",
+      uncertaintyEn: "The index alone does not decide juice content, naming, or a deadline.",
+      also: []},
+    "sugar-input": {cat: "inputs", fresh: "recent", geo: "global", evidence: "official", sort: 20,
+      published: "2026-11-06", effective: null,
+      observed: "October 2026 observation in the FAO release of 6 Nov 2026.",
+      observedTh: "ข้อสังเกตเดือนตุลาคม 2569 ในข่าว FAO วันที่ 6 พ.ย. 2569",
+      relevanceEn: "Each recipe has a different cost exposure. Check the real exposure before talking about margin.",
+      actionEn: "Procurement reviews formulas, sugar contracts and price-review dates. Content does not have to mention cost.",
+      uncertaintyEn: "A world index is not the sugar price in a Malee contract. No-added-sugar is not the same as sugar-free. Tax rates are a separate check, and no tax table is shown here.",
+      also: []},
+    "dairy-divergence": {cat: "inputs", fresh: "recent", geo: "global", evidence: "official", sort: 21,
+      published: "2026-11-06", effective: null,
+      observed: "October 2026 observation in the same FAO release.",
+      observedTh: "ข้อสังเกตเดือนตุลาคม 2569 ในข่าว FAO ฉบับเดียวกัน",
+      relevanceEn: "It matters for milk-powder users and for CMG. A headline index can hide the cost that actually moved.",
+      actionEn: "Track skim milk powder, whole milk powder and raw milk separately by formula. Procurement confirms the price basis and the currency.",
+      uncertaintyEn: "Do not infer that Thai UHT cost, or Malee's cost, fell. No purchasing contract is in this snapshot.",
+      also: ["fruit"]},
+    "sappe-formats": {cat: "consumer", fresh: "recent", geo: "mix", evidence: "company", sort: 40,
+      published: "2026-10-20", effective: null,
+      observed: "Company news dated 20 Oct 2026. The exhibition itself is dated 17–21 Oct 2026 in that news index.",
+      observedTh: "ข่าวบริษัทวันที่ 20 ต.ค. 2569 ตัวงานแสดงสินค้าลงวันที่ 17–21 ต.ค. 2569 ในดัชนีข่าวเดียวกัน",
+      relevanceEn: "A competitor is competing on flavour, texture, occasion and export range.",
+      actionEn: "Build a competitor assortment board from public information. Test an occasion. Do not copy artwork.",
+      uncertaintyEn: "A trade-show lineup is not proof of nationwide Thai distribution or of strong sales. Do not treat a competitor claim as Malee's claim.",
+      also: []},
+    "aseptic-pet": {cat: "oem", fresh: "older", geo: "mix", evidence: "trade", sort: 82,
+      published: "2026-06-08", effective: null,
+      observed: "June 2026 trade report. Not a November utilisation figure.",
+      observedTh: "รายงานการค้าเดือนมิถุนายน 2569 ไม่ใช่ตัวเลขการใช้กำลังผลิตเดือนพฤศจิกายน",
+      relevanceEn: "It reflects competition on packaging and on how flexible production can be.",
+      actionEn: "Compare pack formats on occasion, shelf life and total cost, using specifications that have been checked.",
+      uncertaintyEn: "This is a supplier and customer statement, not an independent audit. Do not call every SKU FDA-approved. Do not infer current line utilisation.",
+      also: ["coconut"]},
+    "orange-supply-demand": {cat: "fruit", fresh: "older", geo: "global", evidence: "trade", sort: 81,
+      published: "2026-06-04", effective: null,
+      observed: "A 2026/27 forecast published in June 2026. Not a harvest result observed in November.",
+      observedTh: "คาดการณ์ฤดู 2026/27 ที่เผยแพร่เดือนมิถุนายน 2569 ไม่ใช่ผลเก็บเกี่ยวที่เห็นในพฤศจิกายน",
+      relevanceEn: "It bears on orange-juice inputs, pricing and the juice mix.",
+      actionEn: "Procurement asks for a crop and quotation update. Marketing stays with flavour, occasion and value that can be proved.",
+      uncertaintyEn: "A forecast is not an actual volume. A futures price is not the cost delivered to a factory. No November update and no pineapple series were verified.",
+      also: []},
+    "demand-packaging": {cat: "consumer", fresh: "older", geo: "mix", evidence: "trade", sort: 80,
+      published: "2026-06-15", effective: null,
+      observed: "Q1 2026 observations and a 2026–2028 outlook, published 15 Jun 2026. Not a latest-month demand reading.",
+      observedTh: "ข้อสังเกตไตรมาส 1/2569 และมุมมองปี 2569–2571 เผยแพร่ 15 มิ.ย. 2569 ไม่ใช่ดีมานด์เดือนล่าสุด",
+      relevanceEn: "It helps frame a pack-price idea without assuming a premium product wins in every shopper group.",
+      actionEn: "Run a small pack and price test with shoppers and stores. Keep the label easy to read.",
+      uncertaintyEn: "This is not last month's demand. A functional or protein claim needs the formula and Regulatory. There is no evidence here that the whole plant-based market grew.",
+      also: ["inputs"]},
+    "1111-channel": {cat: "retail", fresh: "recent", geo: "th", evidence: "official", sort: 10,
+      published: null, effective: null,
+      observed: "Campaign window 7–13 November 2026. Platform dates differ. The page's own publication date was not established.",
+      observedTh: "ช่วงแคมเปญ 7–13 พ.ย. 2569 แต่ละแพลตฟอร์มคนละวัน วันเผยแพร่ของหน้านั้นยังไม่ทราบ",
+      relevanceEn: "It bears on the official store, on content that helps someone choose a pack, and on Sales coordination.",
+      actionEn: "Confirm price, stock, terms and a store link that has been approved. Use a buying checklist instead of an unconfirmed discount.",
+      uncertaintyEn: "This does not show that Malee joined the promotion. A card offer is not a discount on every product. No sales, GMV or conversion figure was verified.",
+      also: []}
+  }
+};
+
+</script>
+<script>
+/* Malee business radar. Qualitative sources only. No scores, no search series. */
+(function(){
+"use strict";
+var RAW = window.BIZ_RAW, META = window.BIZ_META;
+var LANG_KEY = "malee-biz-lang-v1";
+var GROUPS = [
+  ["มะพร้าวน้ำหอม","น้ำมะพร้าว","มะพร้าว","aromatic coconut","coconut water","coconut","coco"],
+  ["นมยูเอชที","นมผง","นมจากพืช","นมโอ๊ต","dairy","milk","uht","นม"],
+  ["รับจ้างผลิต","contract manufacturing","private label","cmg","oem","รับจ้าง"],
+  ["labelling","labeling","label","ฉลาก","อย.","fda"]
+];
+var state = {q:"", cat:"all", geo:"all", ev:"all", fresh:"all", lang:"th"};
+var picked = [];
+var basketId = "coconut";
+var openId = "";
+
+function $(s){return document.querySelector(s);}
+function el(tag, cls){var n=document.createElement(tag); if(cls) n.className=cls; return n;}
+function tx(s){return document.createTextNode(s==null?"":String(s));}
+function add(parent){for(var i=1;i<arguments.length;i++){var c=arguments[i]; if(c==null||c===false) continue; parent.appendChild(typeof c==="string"?tx(c):c);} return parent;}
+function btn(cls, label){var b=el("button", cls); b.type="button"; b.appendChild(tx(label)); return b;}
+function isoParts(iso){var p=String(iso).split("-"); return {y:+p[0], m:+p[1], d:+p[2]};}
+var MTH=["ม.ค.","ก.พ.","มี.ค.","เม.ย.","พ.ค.","มิ.ย.","ก.ค.","ส.ค.","ก.ย.","ต.ค.","พ.ย.","ธ.ค."];
+var MEN=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function fmt(iso){
+  if(!iso) return null;
+  var p=isoParts(iso);
+  return p.d+" "+MEN[p.m-1]+" "+p.y+" · "+p.d+" "+MTH[p.m-1]+" "+(p.y+543);
+}
+function latin(term){return /^[a-z0-9 .+-]+$/i.test(term);}
+function escRe(s){return s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");}
+function hasTerm(text, term){
+  var h=String(text).toLowerCase(), t=term.toLowerCase();
+  if(latin(t)) return new RegExp("(^|[^a-z0-9])"+escRe(t)+"(?=$|[^a-z0-9])","i").test(h);
+  return h.indexOf(t)>=0;
+}
+function hay(sig){
+  var m=META.signals[sig.id], bits=[sig.title_th,sig.title_en,sig.summary_th,sig.summary_en,sig.freshness,sig.scope,sig.relevance_th,sig.action_th,sig.uncertainties_flags,sig.evidence_confidence,m.relevanceEn,m.actionEn,m.uncertaintyEn,m.observed,m.observedTh];
+  var cat=META.categories[m.cat]; bits.push(cat.th, cat.en);
+  (m.also||[]).forEach(function(id){var c=META.categories[id]; if(c) bits.push(c.th,c.en);});
+  sig.source_ids.forEach(function(id){var s=RAW.sources[id]; if(s) bits.push(s.title, s.type, s.period||"", s.date_note||"");});
+  return bits.join(" \n ").toLowerCase();
+}
+function matchesQuery(text, q){
+  q=(q||"").trim().toLowerCase();
+  if(!q) return true;
+  var hit=GROUPS.filter(function(g){return g.some(function(t){return hasTerm(q,t);});});
+  if(hit.length){
+    var terms=[]; hit.forEach(function(g){terms=terms.concat(g);});
+    return terms.some(function(t){return hasTerm(text,t);});
+  }
+  return hasTerm(text, q);
+}
+function signals(){
+  return RAW.signals.map(function(s){return s;}).sort(function(a,b){return META.signals[a.id].sort - META.signals[b.id].sort;});
+}
+function visible(){
+  return signals().filter(function(sig){
+    var m=META.signals[sig.id];
+    if(state.cat!=="all" && m.cat!==state.cat) return false;
+    if(state.geo!=="all" && m.geo!==state.geo) return false;
+    if(state.ev!=="all" && m.evidence!==state.ev) return false;
+    if(state.fresh!=="all" && m.fresh!==state.fresh) return false;
+    return matchesQuery(hay(sig), state.q);
+  });
+}
+function sourceUses(id){return RAW.signals.filter(function(s){return s.source_ids.indexOf(id)>=0;}).length;}
+function cautionText(sig){
+  var m=META.signals[sig.id];
+  var blob=[sig.summary_en,sig.summary_th,sig.uncertainties_flags,m.uncertaintyEn,sig.action_th,m.actionEn].join(" ");
+  return /ลดน้ำหนัก|ดีท็อกซ์|detox|boost immunity|\bcure\b|functional|high protein|zero sugar|no-added-sugar|no added sugar|plant-based|plant based|sustainability|zero waste|FDA-approved|ผลรักษา/i.test(blob);
+}
+function badge(cls, text){var s=el("span","bb "+cls); s.appendChild(tx(text)); return s;}
+function dateRow(labelTh, labelEn, value){
+  var p=el("p","drow");
+  var b=el("b"); b.appendChild(tx(labelTh+" · "+labelEn+": "));
+  p.appendChild(b); p.appendChild(tx(value));
+  return p;
+}
+function linkOut(href, label){
+  if(!/^https:\/\//i.test(href)){var s=el("span"); s.appendChild(tx(label)); return s;}
+  var a=el("a"); a.href=href; a.target="_blank"; a.rel="noopener noreferrer"; a.appendChild(tx(label));
+  return a;
+}
+function setOpen(id, on, fromHash){
+  var card=document.getElementById(id);
+  if(!card) return;
+  var panel=card.querySelector(".panel");
+  var toggle=card.querySelector(".toggle");
+  panel.hidden=!on;
+  toggle.setAttribute("aria-expanded", on?"true":"false");
+  card.classList.toggle("open", on);
+  if(on){
+    openId=id;
+    if(!fromHash && location.hash!=="#"+id) history.replaceState(null,"","#"+id);
+  } else if(openId===id){
+    openId="";
+    if(location.hash==="#"+id) history.replaceState(null,"", location.pathname+location.search);
+  }
+}
+function renderCard(sig){
+  var m=META.signals[sig.id];
+  var cat=META.categories[m.cat];
+  var art=el("article","bcard");
+  art.id=sig.id;
+  art.style.borderTopColor=cat.c;
+  art.dataset.cat=m.cat;
+  art.dataset.fresh=m.fresh;
+  art.dataset.geo=m.geo;
+  art.dataset.ev=m.evidence;
+  var head=el("div","bhead");
+  var chips=el("div","chips");
+  chips.appendChild(badge("cat", cat.th+" · "+cat.en));
+  (m.also||[]).forEach(function(id){var c=META.categories[id]; if(c) chips.appendChild(badge("also", c.th));});
+  chips.appendChild(badge("fr-"+m.fresh, META.fresh[m.fresh].th+" · "+META.fresh[m.fresh].en));
+  chips.appendChild(badge("geo", META.geo[m.geo].th+" · "+META.geo[m.geo].en));
+  chips.appendChild(badge("ev-"+m.evidence, META.evidence[m.evidence].th+" · "+META.evidence[m.evidence].en));
+  head.appendChild(chips);
+  var h=el("h3"); h.id="h-"+sig.id;
+  var toggle=btn("toggle", "");
+  toggle.setAttribute("aria-controls","p-"+sig.id);
+  toggle.setAttribute("aria-expanded","false");
+  toggle.dataset.toggle=sig.id;
+  var titles=el("span","titles");
+  var th=el("span","thline"); th.appendChild(tx(sig.title_th));
+  var en=el("span","enline"); en.appendChild(tx(sig.title_en));
+  titles.appendChild(th); titles.appendChild(en);
+  toggle.appendChild(titles);
+  h.appendChild(toggle);
+  head.appendChild(h);
+  var teaser=el("p","teaser"); teaser.appendChild(tx(sig.summary_th));
+  head.appendChild(teaser);
+  art.appendChild(head);
+  var panel=el("div","panel"); panel.id="p-"+sig.id; panel.hidden=true;
+  panel.setAttribute("role","region"); panel.setAttribute("aria-labelledby","h-"+sig.id);
+  var fact=el("div","fact");
+  fact.appendChild(el("p","kicker")).appendChild(tx("ข้อเท็จจริงจากแหล่ง · Sourced fact"));
+  var sth=el("p"); sth.appendChild(tx(sig.summary_th)); fact.appendChild(sth);
+  var sen=el("p","enline"); sen.appendChild(tx(sig.summary_en)); fact.appendChild(sen);
+  fact.appendChild(dateRow("วันเผยแพร่","Published", m.published?fmt(m.published):"ไม่ทราบ · not established"));
+  if(m.effective) fact.appendChild(dateRow("วันมีผล","Effective date", fmt(m.effective)+" — ใช้เป็นวันมีผล ไม่ใช่วันประกาศ"));
+  (m.extraDates||[]).forEach(function(d){fact.appendChild(dateRow("วันมีผลอีกฉบับ","Other effective date", fmt(d.iso)+" — "+d.note));});
+  fact.appendChild(dateRow("ช่วงที่แหล่งพูดถึง","Observation or period", m.observed));
+  var oth=el("p","enline"); oth.appendChild(tx(m.observedTh)); fact.appendChild(oth);
+  fact.appendChild(dateRow("วันที่ทีมวิจัยเปิดแหล่ง","Checked", META.checkedLabel+" · "+META.checkedLabelTh+" — ไม่ใช่วันเผยแพร่"));
+  var srcP=el("p"); srcP.appendChild(tx("แหล่ง · Sources: "));
+  sig.source_ids.forEach(function(id, i){
+    var s=RAW.sources[id];
+    if(i) srcP.appendChild(tx(" · "));
+    srcP.appendChild(linkOut(s.url, s.title));
+    var n=sourceUses(id);
+    if(n>1) srcP.appendChild(tx(" (ใช้ร่วม "+n+" การ์ด · shared by "+n+" cards, not "+n+" separate confirmations)"));
+  });
+  fact.appendChild(srcP);
+  var conf=el("p","note"); conf.appendChild(tx(sig.evidence_confidence)); fact.appendChild(conf);
+  panel.appendChild(fact);
+  var op=el("div","opinion");
+  op.appendChild(el("p","kicker")).appendChild(tx("มุมมองผู้วิเคราะห์ · Analyst opinion, not a sourced fact"));
+  var why=el("p"); var wb=el("b"); wb.appendChild(tx("ทำไมเกี่ยวกับมาลี · Why Malee: ")); why.appendChild(wb); why.appendChild(tx(sig.relevance_th)); op.appendChild(why);
+  var whyEn=el("p","enline"); whyEn.appendChild(tx(m.relevanceEn)); op.appendChild(whyEn);
+  var act=el("p"); var ab=el("b"); ab.appendChild(tx("ข้อเสนอ ไม่ใช่คำสั่งจากแหล่ง · Suggested action: ")); act.appendChild(ab); act.appendChild(tx(sig.action_th)); op.appendChild(act);
+  var actEn=el("p","enline"); actEn.appendChild(tx(m.actionEn)); op.appendChild(actEn);
+  panel.appendChild(op);
+  var un=el("div","uncert");
+  un.appendChild(el("p","kicker")).appendChild(tx("สิ่งที่ยังไม่รู้ · Limits"));
+  un.appendChild(el("p")).appendChild(tx(sig.uncertainties_flags));
+  un.appendChild(el("p","enline")).appendChild(tx(m.uncertaintyEn));
+  if(m.evidence==="official" && m.cat==="regulation"){
+    var leg=el("p","legal");
+    leg.appendChild(tx("ตรวจจากทะเบียนเท่านั้น ยังไม่อ่านตัวบทเต็ม และหน้านี้ไม่ได้บอกว่าต้องปฏิบัติอย่างไร · Index only. The full legal text was not reviewed, and this page does not prescribe compliance."));
+    un.appendChild(leg);
+  }
+  if(cautionText(sig)){
+    var c=el("p","legal");
+    c.appendChild(tx("คำเรื่องสุขภาพ ฟังก์ชัน น้ำตาล จากพืช ความยั่งยืน หรือ FDA ในบัตรนี้ไม่ใช่โฆษณาที่พร้อมเผยแพร่ · Health, function, sugar, plant-based, sustainability or FDA wording here is not ready-to-publish advertising."));
+    un.appendChild(c);
+  }
+  panel.appendChild(un);
+  var jump=el("p","jump");
+  jump.appendChild(linkOut("index.html#ask", "ไปกล่องไอเดียโซเชียล · Open the social idea box"));
+  jump.appendChild(tx(" — เปิดหน้าเดิมเท่านั้น ไม่ได้บันทึกไอเดียให้"));
+  panel.appendChild(jump);
+  art.appendChild(panel);
+  toggle.addEventListener("click", function(){setOpen(sig.id, panel.hidden, false);});
+  toggle.addEventListener("keydown", function(e){
+    if(e.key!=="Enter" && e.key!==" ") return;
+    if(e.isTrusted) return;
+    e.preventDefault();
+    setOpen(sig.id, panel.hidden, false);
+  });
+  return art;
+}
+function fillSelect(sel, pairs){
+  sel.innerHTML="";
+  pairs.forEach(function(p){
+    var o=el("option"); o.value=p[0]; o.appendChild(tx(p[1])); sel.appendChild(o);
+  });
+}
+function renderFilters(){
+  fillSelect($("#bizCat"), [["all","ทุกหมวด · All categories"]].concat(Object.keys(META.categories).map(function(k){var c=META.categories[k]; return [k, c.th+" · "+c.en];})));
+  fillSelect($("#bizGeo"), [["all","ทุกพื้นที่ · All geographies"],["th","ไทย · Thailand"],["mix","ไทยและต่างประเทศ · Thailand and international"],["global","โลก · Global"]]);
+  fillSelect($("#bizEv"), [["all","ทุกประเภทหลักฐาน · All evidence"],["official","หน่วยงานทางการ · Official"],["company","คำกล่าวบริษัท · Company statement"],["trade","รายงานการค้า · Trade or independent"]]);
+  fillSelect($("#bizFresh"), [["all","ทุกช่วงเวลา · All dates"],["recent","ช่วงนี้ · Current window"],["trailing","บริบทปี 2569 · Trailing 2026"],["older","บริบทเก่ากว่า · Older context"]]);
+}
+function renderList(){
+  var box=$("#bizList"); box.innerHTML="";
+  var list=visible();
+  var total=RAW.signals.length;
+  $("#bizCount").textContent=list.length+" of "+total+" · แสดง "+list.length+" จาก "+total+" สัญญาณ";
+  if(!list.length){
+    var empty=el("p","empty"); empty.appendChild(tx("ไม่พบสัญญาณที่ตรงตัวกรอง · No watchpoints match. Reset to see all 15."));
+    box.appendChild(empty); return;
+  }
+  list.forEach(function(sig){box.appendChild(renderCard(sig));});
+  if(openId && list.some(function(s){return s.id===openId;})) setOpen(openId, true, true);
+}
+function renderThemes(){
+  var box=$("#bizThemes"); box.innerHTML="";
+  META.themes.forEach(function(t){
+    var card=el("a","theme"); card.href="#"+t.ids[0];
+    var k=el("b"); k.appendChild(tx(t.th)); card.appendChild(k);
+    var en=el("span","enline"); en.appendChild(tx(t.en)); card.appendChild(en);
+    var p=el("p"); p.appendChild(tx(t.whyTh)); card.appendChild(p);
+    var pe=el("p","enline"); pe.appendChild(tx(t.why)); card.appendChild(pe);
+    var links=el("span","ids");
+    t.ids.forEach(function(id,i){if(i) links.appendChild(tx(" ")); var s=el("span"); s.appendChild(tx("#"+id)); links.appendChild(s);});
+    card.appendChild(links);
+    card.addEventListener("click", function(e){
+      e.preventDefault();
+      state.q=""; state.cat="all"; state.geo="all"; state.ev="all"; state.fresh="all";
+      $("#bizQ").value="";
+      $("#bizCat").value="all"; $("#bizGeo").value="all"; $("#bizEv").value="all"; $("#bizFresh").value="all";
+      renderList();
+      setOpen(t.ids[0], true, false);
+      var node=document.getElementById(t.ids[0]);
+      if(node) node.scrollIntoView({behavior:"smooth", block:"start"});
+    });
+    box.appendChild(card);
+  });
+}
+function renderTimeline(){
+  var rows=[];
+  signals().forEach(function(sig){
+    var m=META.signals[sig.id];
+    if(m.published) rows.push({iso:m.published, kind:"Published · วันเผยแพร่", id:sig.id, th:sig.title_th});
+    if(m.effective) rows.push({iso:m.effective, kind:"Effective · วันมีผล", id:sig.id, th:sig.title_th});
+    (m.extraDates||[]).forEach(function(d){rows.push({iso:d.iso, kind:"Effective · วันมีผล", id:sig.id, th:d.note});});
+  });
+  rows.push({iso:"2026-11-07", kind:"Campaign window starts · เริ่มช่วงแคมเปญ", id:"1111-channel", th:"KTC Double Day window, publication date unknown"});
+  rows.sort(function(a,b){return a.iso<b.iso?-1:a.iso>b.iso?1:0;});
+  var ol=$("#bizTime"); ol.innerHTML="";
+  rows.forEach(function(r){
+    var li=el("li");
+    li.appendChild(tx(fmt(r.iso)+" — "+r.kind+" — "));
+    var a=el("a"); a.href="#"+r.id; a.appendChild(tx(r.th));
+    a.addEventListener("click", function(e){e.preventDefault(); reveal(r.id);});
+    li.appendChild(a);
+    ol.appendChild(li);
+  });
+}
+function reveal(id){
+  if(!visible().some(function(s){return s.id===id;})){
+    state.q=""; state.cat="all"; state.geo="all"; state.ev="all"; state.fresh="all";
+    $("#bizQ").value="";
+    ["bizCat","bizGeo","bizEv","bizFresh"].forEach(function(n){$("#"+n).value="all";});
+    renderList();
+  }
+  setOpen(id, true, false);
+  var node=document.getElementById(id);
+  if(node) node.scrollIntoView({behavior:"smooth", block:"start"});
+}
+function renderSources(){
+  var tb=$("#bizSources"); tb.innerHTML="";
+  Object.keys(RAW.sources).forEach(function(id){
+    var s=RAW.sources[id];
+    var tr=el("tr");
+    [id, s.title, s.type].forEach(function(val){var td=el("td"); td.appendChild(tx(val)); tr.appendChild(td);});
+    var pub=el("td"); pub.appendChild(tx(s.published?fmt(s.published):"ไม่ทราบ · not established")); tr.appendChild(pub);
+    var per=el("td"); per.appendChild(tx(s.period||s.date_note||"—")); tr.appendChild(per);
+    var chk=el("td"); chk.appendChild(tx(META.checkedLabel)); tr.appendChild(chk);
+    var url=el("td"); url.appendChild(linkOut(s.url, "เปิดแหล่ง · Open")); tr.appendChild(url);
+    var n=el("td"); n.appendChild(tx(String(sourceUses(id)))); tr.appendChild(n);
+    tb.appendChild(tr);
+  });
+}
+function basketBy(id){for(var i=0;i<RAW.keyword_baskets.length;i++) if(RAW.keyword_baskets[i].id===id) return RAW.keyword_baskets[i]; return null;}
+function trendsHref(range){
+  var terms=picked.map(function(t){return t.trim();}).filter(Boolean).slice(0,5);
+  if(!terms.length) return "";
+  var params=new URLSearchParams();
+  params.set("date", range==="5y"?"today 5-y":"today 12-m");
+  var geo=$("#bizLinkGeo").value;
+  if(geo) params.set("geo", geo);
+  params.set("hl","th");
+  params.set("q", terms.join(","));
+  return "https://trends.google.com/trends/explore?"+params.toString();
+}
+function renderBaskets(){
+  var box=$("#bizBaskets"); box.innerHTML="";
+  RAW.keyword_baskets.forEach(function(b){
+    var button=btn("basket"+(b.id===basketId?" on":""), b.id+" · "+b.terms.length);
+    button.dataset.basket=b.id;
+    button.addEventListener("click", function(){
+      basketId=b.id; picked=b.terms.slice();
+      $("#bizTermMsg").textContent="";
+      renderBaskets(); renderPicked();
+    });
+    box.appendChild(button);
+  });
+  var note=basketBy(basketId);
+  $("#bizBasketNote").textContent=note?note.note:"";
+}
+function renderPicked(){
+  var box=$("#bizPicked"); box.innerHTML="";
+  picked.forEach(function(term){
+    var chip=btn("term", term+" ×");
+    chip.addEventListener("click", function(){picked=picked.filter(function(t){return t!==term;}); renderPicked();});
+    box.appendChild(chip);
+  });
+  var href=trendsHref("12m"), href5=trendsHref("5y");
+  var a=$("#bizTrends"), a5=$("#bizTrends5");
+  a.href=href||"#"; a5.href=href5||"#";
+  a.setAttribute("aria-disabled", href?"false":"true");
+  a5.setAttribute("aria-disabled", href5?"false":"true");
+  $("#bizTermCount").textContent=picked.length+" / 5";
+  if(basketId==="brands") $("#bizBrandWarn").hidden=false; else $("#bizBrandWarn").hidden=true;
+}
+function apply(){
+  state.q=$("#bizQ").value;
+  state.cat=$("#bizCat").value;
+  state.geo=$("#bizGeo").value;
+  state.ev=$("#bizEv").value;
+  state.fresh=$("#bizFresh").value;
+  renderList();
+}
+function reset(){
+  state.q=""; state.cat="all"; state.geo="all"; state.ev="all"; state.fresh="all";
+  $("#bizQ").value="";
+  $("#bizCat").value="all"; $("#bizGeo").value="all"; $("#bizEv").value="all"; $("#bizFresh").value="all";
+  renderList();
+}
+function setLang(lang){
+  state.lang=lang==="en"?"en":"th";
+  document.body.classList.toggle("lang-en", state.lang==="en");
+  document.body.classList.toggle("lang-th", state.lang!=="en");
+  $("#bizLangTh").setAttribute("aria-pressed", state.lang==="th"?"true":"false");
+  $("#bizLangEn").setAttribute("aria-pressed", state.lang==="en"?"true":"false");
+  try{localStorage.setItem(LANG_KEY, state.lang);}catch(e){}
+}
+function openHash(){
+  var id=(location.hash||"").replace(/^#/,"");
+  if(!id || !META.signals[id]) return;
+  if(!document.getElementById(id)) { reset(); }
+  setOpen(id, true, true);
+  var node=document.getElementById(id);
+  if(node) node.scrollIntoView({block:"start"});
+}
+function init(){
+  renderFilters();
+  renderThemes();
+  renderSources();
+  basketId="coconut";
+  picked=(basketBy("coconut").terms||[]).slice();
+  renderBaskets();
+  renderPicked();
+  var saved="th";
+  try{saved=localStorage.getItem(LANG_KEY)||"th";}catch(e){}
+  setLang(saved);
+  $("#bizQ").addEventListener("input", apply);
+  $("#bizQ").addEventListener("keydown", function(e){if(e.key==="Enter"){e.preventDefault(); apply();}});
+  ["bizCat","bizGeo","bizEv","bizFresh"].forEach(function(id){$("#"+id).addEventListener("change", apply);});
+  $("#bizReset").addEventListener("click", reset);
+  $("#bizLangTh").addEventListener("click", function(){setLang("th");});
+  $("#bizLangEn").addEventListener("click", function(){setLang("en");});
+  $("#bizLinkGeo").addEventListener("change", renderPicked);
+  $("#bizAdd").addEventListener("click", function(){
+    var v=$("#bizTerm").value.trim();
+    if(!v) return;
+    if(picked.indexOf(v)>=0){$("#bizTermMsg").textContent="คำนี้ถูกเลือกแล้ว · Already selected."; return;}
+    if(picked.length>=5){$("#bizTermMsg").textContent="Google Trends เปรียบเทียบได้ไม่เกิน 5 คำ · At most 5 terms."; return;}
+    picked.push(v); $("#bizTerm").value=""; $("#bizTermMsg").textContent=""; renderPicked();
+  });
+  $("#bizTerm").addEventListener("keydown", function(e){if(e.key==="Enter"){e.preventDefault(); $("#bizAdd").click();}});
+  apply();
+  openHash();
+  window.addEventListener("hashchange", openHash);
+  var gaps=$("#gaps");
+  var nulls=RAW.signals.every(function(s){return s.numeric_series==null;}) && RAW.keyword_baskets.every(function(b){return b.series==null;});
+  gaps.appendChild(tx(nulls
+    ? "ไม่มีชุดตัวเลขที่ดึงมาได้ในรอบ 8 พ.ย. 2569 ไม่ใช่ค่าศูนย์ และไม่มีกราฟความนิยมค้นหา ราคาหน้าฟาร์ม ยอดขายหมวด หรือ GMV · No numerical series was retrieved on 8 Nov 2026. That is not a value of zero. There is no search-popularity chart, farm-gate price, category sales series, or GMV."
+    : "ข้อมูลตัวเลขไม่พร้อมตามที่ตั้งใจ · Numeric fields were not all empty."));
+}
+if(document.readyState==="loading") document.addEventListener("DOMContentLoaded", init);
+else init();
+})();
+
+</script>
+</body>
+</html>

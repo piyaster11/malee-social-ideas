@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>เรดาร์ธุรกิจมาลี · Malee Business Trends Radar</title>
+<link rel="stylesheet" href="src/style.css">
+<link rel="stylesheet" href="src/biz.css">
+</head>
+<body class="lang-th">
+<a class="skip" href="#signals">ข้ามไปที่สัญญาณ · Skip to watchpoints</a>
+<header class="top">
+  <div class="wrap">
+    <div class="ttl">
+      <div>
+        <p class="crumb"><a id="homeLink" href="index.html">← ไอเดียโซเชียล · Social Ideas</a></p>
+        <h1>เรดาร์ธุรกิจมาลี <span class="th">Malee Business Trends Radar</span></h1>
+        <p class="sub">อาหาร เครื่องดื่ม มะพร้าว และห่วงโซ่ธุรกิจ · F&amp;B, coconut and the business value chain<br>
+        <span class="th">ตรวจแหล่งข้อมูล 8 พ.ย. 2569 ICT · Sources checked 8 Nov 2026 ICT — research snapshot, not a live feed</span></p>
+      </div>
+      <div class="badges">
+        <span class="bdg mock">ไม่ใช่ฟีดสด · Not a live feed</span>
+        <span class="bdg own">ไม่มีคะแนน · No score</span>
+      </div>
+    </div>
+    <div class="langbar" role="group" aria-label="Language">
+      <button type="button" id="bizLangTh" aria-pressed="true">ไทย</button>
+      <button type="button" id="bizLangEn" aria-pressed="false">EN</button>
+      <span class="langnote">ทั้งสองภาษาอยู่บนหน้า ปุ่มนี้แค่สลับว่าบรรทัดไหนนำ · Both languages stay on the page. This only changes which line leads.</span>
+    </div>
+    <nav class="nav" aria-label="On this page">
+      <a href="#themes">ธีม · Themes</a>
+      <a href="#signals">สัญญาณ · Watchpoints</a>
+      <a href="#words">คำค้น · Keywords</a>
+      <a href="#time">เส้นเวลา · Timeline</a>
+      <a href="#sources">แหล่ง · Sources</a>
+      <a href="#method">วิธีทำ · Method</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<section class="gap" id="gaps">
+  <h2>อะไรที่หน้านี้ไม่มี · What this page does not have</h2>
+</section>
+
+<section id="themes">
+  <h2>ลำดับที่ควรอ่านก่อน <span class="th">Reading order, not a rank and not a score</span></h2>
+  <p class="note">ห้าข้อนี้เป็นมุมมองผู้วิเคราะห์ว่าควรเปิดบัตรไหนก่อน ไม่ได้วัดว่าตลาดขึ้นหรือลง · Five analyst prompts for which cards to open first. They do not say the market rose or fell.</p>
+  <div id="bizThemes" class="themes"></div>
+</section>
+
+<section class="legend" id="legend" aria-label="Current versus context">
+  <h2>อะไรเป็นของช่วงนี้ และอะไรเป็นบริบทเก่า · Current versus context</h2>
+  <ul>
+    <li><b>ช่วงนี้ · Current window.</b> เผยแพร่หรือมีผลตั้งแต่ 9 ต.ค. 2569 หรือเป็นแคมเปญที่ยังเปิดอยู่ในสัปดาห์ที่ตรวจ (8 พ.ย.) · Published or effective on or after 9 Oct 2026, or a campaign window that includes the 8 Nov check.</li>
+    <li><b>บริบทปี 2569 · Trailing 2026.</b> เอกสารปีนี้ที่เก่ากว่า 30 วัน รวมรายงานครึ่งปีแรกและกฎเดือนกันยายน · 2026 documents older than 30 days, including the H1 company note and the September rule.</li>
+    <li><b>บริบทเก่ากว่า · Older context.</b> มีนาคมและมิถุนายน ใช้ประกอบ ไม่ใช่ภาพเดือนพฤศจิกายน · March and June material. Context, not a November picture.</li>
+  </ul>
+  <p class="note">วันที่มีผลของกฎหมายใช้กรองได้เมื่อติดป้ายว่าเป็นวันมีผล วันที่ตรวจแหล่ง (8 พ.ย.) ไม่ถูกใช้แทนวันเผยแพร่ · A legal effective date can be used as a date only when it is labelled as one. The 8 Nov check date is never shown as a publication date.</p>
+</section>
+
+<section id="signals">
+  <h2>15 สัญญาณจาก 10 แหล่ง <span class="th">15 watchpoints, 10 sources</span> <span class="cnt" id="bizCount"></span></h2>
+  <p class="note">การ์ดที่อ้างข่าวมาลีฉบับเดียวกัน หรือข่าว FAO ฉบับเดียวกัน ไม่ได้นับเป็นหลักฐานคนละชิ้น · Cards that cite the same Malee release or the same FAO release are not extra corroboration.</p>
+  <form class="filters" id="bizForm" action="#" onsubmit="return false">
+    <label>ค้นหา · Search<input id="bizQ" type="search" enterkeyhint="search" autocomplete="off" placeholder="มะพร้าว, coconut, นม, dairy, CMG, ฉลาก"></label>
+    <label>หมวด · Category<select id="bizCat"></select></label>
+    <label>พื้นที่ · Geography<select id="bizGeo"></select></label>
+    <label>หลักฐาน · Evidence<select id="bizEv"></select></label>
+    <label>ความใหม่ · Freshness<select id="bizFresh"></select></label>
+    <button type="button" id="bizReset" class="ghost">ล้างตัวกรอง · Reset</button>
+  </form>
+  <div id="bizList" class="blist"></div>
+</section>
+
+<section id="words">
+  <h2>คำค้นที่เสนอไว้ <span class="th">Keyword explorer, links only</span></h2>
+  <div class="noseries" role="note">
+    <b>ไม่มีชุดตัวเลขที่ดึงมาได้ · No numerical series retrieved</b>
+    <p>ช่องนี้ว่างเพราะไม่ได้เก็บข้อมูล Google Trends ไว้ ไม่ใช่เพราะความสนใจเท่ากับศูนย์ ปุ่มด้านล่างเปิดเว็บ Google Trends ซึ่งต้องใช้อินเทอร์เน็ต ปลายทางอาจมีกราฟหรืออาจไม่มีข้อมูล</p>
+    <p class="enline">This panel is empty because no Google Trends series was saved. It is not a reading of zero. The button opens Google Trends, which needs the internet. That site may show a chart, or it may show nothing. A comma compares separate queries. It does not merge Thai and English as one synonym. Relative interest is not demand, sales, market share, or a health claim. Broad “มาลี” can mean something unrelated. OEM queries can be rarely searched.</p>
+  </div>
+  <div id="bizBaskets" class="baskets" role="group" aria-label="Keyword baskets"></div>
+  <p class="note" id="bizBasketNote"></p>
+  <div id="bizPicked" class="picked" aria-live="polite"></div>
+  <p class="termcount">คำที่ส่งไปเปรียบเทียบ · Terms in the link: <b id="bizTermCount"></b> สูงสุด 5 · max 5</p>
+  <div class="addrow">
+    <label>เพิ่มคำเอง · Add a term<input id="bizTerm" type="text" maxlength="80" autocomplete="off"></label>
+    <button type="button" id="bizAdd">เพิ่ม · Add</button>
+  </div>
+  <p class="note" id="bizTermMsg" role="status"></p>
+  <p id="bizBrandWarn" class="legal" hidden>คำว่า “มาลี” กว้างและอาจไม่เกี่ยวกับบริษัท · The word “มาลี” is broad and may be unrelated to the company. This basket is a proposed comparison, not a measured ranking.</p>
+  <label class="geoline">พื้นที่ของลิงก์เท่านั้น ไม่ได้กรองการ์ด · Link geography only, it does not filter the cards
+    <select id="bizLinkGeo">
+      <option value="TH" selected>ประเทศไทย · Thailand (TH)</option>
+      <option value="">ทั่วโลก · Worldwide (no geo)</option>
+    </select>
+  </label>
+  <p class="trendbtns">
+    <a id="bizTrends" class="trends" href="#">เปิดใน Google Trends / Open in Google Trends</a>
+    <a id="bizTrends5" class="trends ghost" href="#">เปิด 5 ปีใน Google Trends / Open 5 years in Google Trends</a>
+  </p>
+  <p class="note">ต้องใช้อินเทอร์เน็ต · Needs the internet. 12 เดือนเป็นค่าเริ่มต้น · 12 months is the default. ลิงก์ไม่ได้แปลว่าคำเหล่านี้กำลังถูกค้นเพิ่มขึ้น · The link does not mean these words are rising related searches.</p>
+</section>
+
+<section id="time">
+  <h2>อะไรเปลี่ยนตามวันที่ของแหล่ง <span class="th">Dated events, not a demand chart</span></h2>
+  <p class="note">เส้นนี้คือวันเผยแพร่ วันมีผล หรือวันเริ่มแคมเปญ ไม่ใช่ยอดขาย · These are publication dates, effective dates, or a campaign start. Not sales.</p>
+  <ol id="bizTime" class="time"></ol>
+</section>
+
+<section id="sources">
+  <h2>ทะเบียนแหล่ง <span class="th">Source register</span></h2>
+  <div class="tablewrap">
+    <table class="sources">
+      <thead><tr>
+        <th>รหัส</th><th>แหล่ง</th><th>ประเภท</th><th>วันเผยแพร่</th><th>ช่วงที่ครอบคลุม</th><th>วันที่ตรวจ</th><th>ลิงก์</th><th>การ์ด</th>
+      </tr></thead>
+      <tbody id="bizSources"></tbody>
+    </table>
+  </div>
+  <p class="note">คอลัมน์การ์ดบอกว่ามีกี่สัญญาณใช้แหล่งนั้น ตัวเลขมากกว่า 1 ไม่ได้แปลว่ามีคนยืนยันเพิ่ม · The card column is how many watchpoints share that source. More than one is not extra confirmation.</p>
+</section>
+
+<section id="method">
+  <h2>วิธีทำและข้อจำกัด <span class="th">Method and limits</span></h2>
+  <ul class="method">
+    <li>สแนปช็อตที่ตรวจวันที่ 8 พ.ย. 2569 ICT ไม่มีการดึงข้อมูลอัตโนมัติบน GitHub Pages · Snapshot checked 8 Nov 2026 ICT. No automatic refresh runs on this site.</li>
+    <li>ถ้าจะให้มีรอบตรวจใหม่ นั่นเป็นข้อเสนอ ไม่ใช่งานที่ตั้งไว้แล้ว · A future check is a proposal, not a job that is already running.</li>
+    <li>ประกาศ อย. ตรวจจากทะเบียน ยังไม่อ่านตัวบท และหน้านี้ไม่บอกขั้นตอนปฏิบัติตามกฎหมาย · FDA items are index checks. The full text was not reviewed, and nothing here is a compliance instruction.</li>
+    <li>ดัชนี FAO เป็นราคาสินค้าโภคภัณฑ์ระหว่างประเทศ ไม่ใช่ราคาที่มาลีซื้อ และไม่ใช่ราคาปลีกไทย · FAO indexes are international commodity indexes, not Malee's buying price and not Thai retail prices.</li>
+    <li>ถ้อยคำของมาลีเป็นคำกล่าวบริษัทเรื่องครึ่งปีแรกถึงมิถุนายน ไม่ใช่การเติบโตเดือนพฤศจิกายน · Malee lines are company self-reports about H1 through June, not November growth.</li>
+    <li>มุมมองกรมการค้าภายในเป็นประมาณการเดือนสิงหาคม ไม่ใช่ราคาหน้าฟาร์มวันนี้ · The DIT note is an August outlook, not today's farm-gate price.</li>
+    <li>ไม่มีตารางภาษีน้ำตาลในหน้ารอบนี้ · No sugar-tax rate table is published in this release.</li>
+    <li>หน้านี้ไม่ได้โพสต์โซเชียล และไม่ได้เก็บข้อมูลลูกค้า · This page does not post, and it does not collect customer data.</li>
+  </ul>
+</section>
+</main>
+<script src="src/biz-data.js"></script>
+<script src="src/biz-meta.js"></script>
+<script src="src/biz.js"></script>
+</body>
+</html>
