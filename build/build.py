@@ -31,7 +31,7 @@ def main():
     ict = datetime.now(timezone(timedelta(hours=7)))
     stamp = (
         "Built " + ict.strftime("%Y-%m-%d %H:%M") + " ICT"
-        " · content checked 8 Nov 2026 ICT"
+        " · content first checked 8 Nov 2026 ICT, re-checked 14 Nov 2026 ICT"
         " · draft mockup, this page does not post"
         " · charts: local SVG"
         " · Excel reader: SheetJS Community Edition 0.20.3 (Apache-2.0), vendor/xlsx.full.min.js"
