@@ -1,6 +1,6 @@
 /* Malee Social Ideas — content data for the 9–29 Nov 2026 plan.
    Ideas are drafts. Product SKUs, packs, ingredients and serving instructions must be confirmed by the brand team.
-   Checked 8 Nov 2026 ICT. "Verified" means a public page or snapshot was opened, not that something is popular. */
+   First checked 8 Nov 2026 ICT. Re-checked 14 Nov 2026 ICT. "Verified" means a public page or snapshot was opened, not that something is popular. */
 window.SI = {};
 SI.PLAT = {
   FB:{en:"Facebook",th:"เฟซบุ๊ก",cls:"fb"},
@@ -22,11 +22,11 @@ SI.PLAN = {start:"2026-11-09", weeks:3, en:"9–29 Nov 2026", th:"9–29 พ.ย
 SI.EVENTS = [
   {d:"2026-11-09",en:"Father's Day asset prep starts. Do not publish yet.",th:"เริ่มเตรียมคอนเทนต์วันพ่อ ยังไม่โพสต์",k:"prep",note:"Main asset is held for 5 Dec approval."},
   {d:"2026-11-10",en:"Sales-approval checkpoint (internal). No automatic post.",th:"จุดเช็กฝ่ายขาย (ภายใน) ยังไม่โพสต์อัตโนมัติ",k:"note",note:"Confirm any store link, SKU and terms before N2."},
-  {d:"2026-11-11",en:"11.11 commerce day. Card and retailer campaigns are in market this week. Not a Malee price or voucher.",th:"วัน 11.11 มีแคมเปญร้านค้า/บัตรในสัปดาห์นี้ ไม่ใช่ราคาหรือคูปองของมาลี",k:"sale",note:"See KTC Double Day page. Do not copy their offers onto Malee."},
+  {d:"2026-11-11",en:"11.11 commerce day (now passed). Card and retailer campaigns were in market that week. Not a Malee price or voucher.",th:"วัน 11.11 (ผ่านแล้ว) มีแคมเปญร้านค้า/บัตรในสัปดาห์นั้น ไม่ใช่ราคาหรือคูปองของมาลี",k:"sale",note:"See KTC Double Day page. Do not copy their offers onto Malee."},
   {d:"2026-11-13",en:"Optional home lights or coffee-table prep. No confirmed Malee event tie-in.",th:"ทางเลือก: ซ้อมมุมแสงไฟหรือมุมกาแฟที่บ้าน ยังไม่ผูกกับงานจริง",k:"note",note:"Public event lists for 13–15 Nov were not fully page-verified. Prefer home footage."},
   {d:"2026-11-15",en:"Sukhothai Loi Krathong programme begins (15–24 Nov). Nationwide festival night is 24 Nov, not today.",th:"โปรแกรมสุโขทัยเริ่ม 15–24 พ.ย. คืนลอยกระทงหลักคือ 24 พ.ย. ไม่ใช่วันนี้",k:"fest"},
   {d:"2026-11-16",en:"Prep week: Loy Krathong date card, venue guidance, final asset check. No automatic posting.",th:"สัปดาห์เตรียมการ์ดวันที่ลอยกระทง ตรวจคำแนะนำสถานที่และไฟล์สุดท้าย",k:"note"},
-  {d:"2026-11-24",en:"Loy Krathong (full moon, Tuesday). Follow venue rules. Do not place packs, food or cups in the water.",th:"ลอยกระทง (วันเพ็ญ วันอังคาร) ทำตามกติกาพื้นที่ อย่าวางแพ็ก อาหาร หรือแก้วลงน้ำ",k:"fest"},
+  {d:"2026-11-24",en:"Loy Krathong (full moon, Tuesday). TAT and Thai Rath confirm 24 Nov 2026. BMA opens 35 parks in 22 districts until midnight; fireworks, sky lanterns and alcohol sales are banned in those parks. Follow venue rules. Do not place packs, food or cups in the water.",th:"ลอยกระทง (วันเพ็ญ วันอังคาร) TAT และไทยรัฐยืนยัน 24 พ.ย. 2569 กทม. เปิดสวน 35 แห่งใน 22 เขตถึงเที่ยงคืน ห้ามประทัด โคมลอย และขายแอลกอฮอล์ในสวน ทำตามกติกาพื้นที่ อย่าวางแพ็ก อาหาร หรือแก้วลงน้ำ",k:"fest",note:"BMA green rules: natural-material krathongs, no foam or bread in park ponds, one krathong per family. Online option 05:00–midnight."},
   {d:"2026-11-25",en:"Optional Father's Day teaser only if approved. Main asset waits for 5 Dec.",th:"ทีเซอร์วันพ่อได้เฉพาะเมื่ออนุมัติ ไฟล์หลักรอ 5 ธ.ค.",k:"prep"}
 ];
 SI.OUTSIDE = [
@@ -42,6 +42,8 @@ SI.SOURCES = [
   {t:"U.S. Embassy Bangkok holiday page was requested on 8 Nov 2026 and returned HTTP 500, so it is not the date source. Do not import that page's U.S. observances (including Veterans Day or Thanksgiving) as Thai public holidays.",u:"https://th.usembassy.gov/embassy-official-holidays/"},
   {t:"thailand.go.th events index. On 8 Nov 2026 a public search snippet listed dated rows, including coffee and riverside programmes around 13–15 Nov and Sukhothai 15–24 Nov. Direct fetch returned empty text, so this is not full-page verification. No Malee tie-in.",u:"https://www.thailand.go.th/public/index.php/events"},
   {t:"Thai Rath English travel URL, cited only as a search-result corroboration. The full article was not opened on 8 Nov 2026.",u:"https://en.thairath.co.th/lifestyle/travel/2969329"},
+  {t:"Thai Rath English, published 2 Nov 2026, full article opened 14 Nov 2026 ICT. Confirms Loy Krathong Day 2026 is Tuesday 24 November, the 15th waxing day of the 12th lunar month. Not used as a venue list.",u:"https://en.thairath.co.th/lifestyle/life/2969974"},
+  {t:"The Nation, published 13 Nov 2026, full article opened 14 Nov 2026 ICT. BMA will open 35 public parks in 22 districts on 24 Nov until midnight. Green rules: natural-material krathongs, no foam or bread in park ponds, one krathong per family. Fireworks, sky lanterns and alcohol sales are prohibited in those parks. Online participation 05:00–midnight on the Greener Bangkok site.",u:"https://www.nationthailand.com/thailand/bangkok/40073477"},
   {t:"Public X Thailand trends snapshot, WOEID 23424960, top 20, retrieved 8 Nov 2026 about 09:47 ICT. No volumes were returned. Not re-counted for this page. Presence on that list is not a popularity score, and it did not show 11.11 or Loy Krathong as the reason for this week's plan.",u:"https://x.com/search?q=%23NESCAFERUNKHONKAEN2026"}
 ];
 SI.IDEAS = [
@@ -121,7 +123,7 @@ SI.IDEAS = [
   caution:"Warm, inclusive wording. No pressure around grief. No royal portrait, emblem, or implied endorsement. No discount built on the commemorative day."}
 ];
 SI.THEMES = {week:"9–15 Nov 2026", weekTH:"9–15 พ.ย. 2569",
-  from:"Sources checked 8 Nov 2026 ICT. A verified line is a campaign or a calendar fact. An editorial line is a suggestion, not a measured trend.",
+  from:"Sources first checked 8 Nov 2026, re-checked 14 Nov 2026 ICT. A verified line is a campaign or a calendar fact. An editorial line is a suggestion, not a measured trend.",
   items:[
  {k:"sale1111",lead:1,th:"11.11 เลือกของที่ใช้จริง",en:"11.11, clear choices",
   why:"KTC's Double Day page, opened 8 Nov 2026, shows a promotion period of 7–13 Nov 2026. 11.11 commerce is active this week. That is a campaign calendar fact, not an X trend, and not a Malee offer.",
